@@ -118,9 +118,13 @@ const ProjectCard = ({ project, index }) => {
             )}
           </div>
 
+         
           <div className="flex gap-3">
             {project.id === 2 ? (
-              <Link to={`/project/${project.id}`}>
+              <Link
+                to={`/project/${project.id}`}
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              >
                 <Button size="sm" variant="secondary" className="rounded-full">
                   <Eye className="mr-1 h-4 w-4" /> View Details
                 </Button>
@@ -129,7 +133,11 @@ const ProjectCard = ({ project, index }) => {
 
             {project.link && (
               <a href={project.link} target="_blank" rel="noopener noreferrer">
-                <Button size="sm" variant="outline" className="rounded-full bg-white/10 border-white/20 hover:bg-white/20">
+                <Button
+                  size="sm"
+                  variant="outline"
+                  className="rounded-full bg-white/10 border-white/20 hover:bg-white/20"
+                >
                   <ExternalLink className="h-4 w-4" />
                 </Button>
               </a>

@@ -97,6 +97,12 @@ const ProjectDetail = () => {
     alt="Design 7"
     className="detail-image"
   />
+  <img
+    src="/Design8.jpg"
+    width="1500"
+    alt="Design 8"
+    className="detail-image"
+  />
   
   
   
@@ -106,8 +112,8 @@ const ProjectDetail = () => {
         <section className="text-center space-y-6">
           <h3 className="text-xl font-bold">Click below to check out the prototypes</h3>
           <div className="flex justify-center gap-4">
-            <a target="_blank" rel="noopener noreferrer" className="px-6 py-2 bg-blue-600 text-white rounded-full shadow hover:bg-blue-700">Lo-fi Prototype</a>
-            <a  target="_blank" rel="noopener noreferrer" className="px-6 py-2 bg-purple-600 text-white rounded-full shadow hover:bg-purple-700">Hi-fi Prototype</a>
+            <a href="https://www.figma.com/proto/aFXQczsK2Ya6rTqkfZEEDL/Digital-Wireframe?node-id=264-41&p=f&t=9EY6i7RFucX7WB5g-0&scaling=scale-down&content-scaling=fixed&page-id=227%3A305&starting-point-node-id=264%3A41" target="_blank" rel="noopener noreferrer" className="px-6 py-2 bg-blue-600 text-white rounded-full shadow hover:bg-blue-700">Lo-fi Prototype</a>
+            <a  href= "https://www.figma.com/proto/aFXQczsK2Ya6rTqkfZEEDL/Digital-Wireframe?node-id=341-43&p=f&t=9EY6i7RFucX7WB5g-0&scaling=scale-down&content-scaling=fixed&page-id=341%3A42&starting-point-node-id=341%3A43" target="_blank" rel="noopener noreferrer" className="px-6 py-2 bg-purple-600 text-white rounded-full shadow hover:bg-purple-700">Hi-fi Prototype</a>
           </div>
         </section>
       </div>

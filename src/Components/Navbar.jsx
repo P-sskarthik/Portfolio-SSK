@@ -1,32 +1,56 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Navbar = ({ activeSection }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation(); 
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setScrolled(window.scrollY > 20);
+  //   };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
+  //   window.addEventListener('scroll', handleScroll);
+  //   return () => window.removeEventListener('scroll', handleScroll);
+  // }, []);
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+useEffect(() => {
+  if (location.state?.scrollTo) {
+    const id = location.state.scrollTo;
+    scrollToSection(id);
+  }
+}, [location]);
 
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      window.scrollTo({
-        top: element.offsetTop - 80,
-        behavior: 'smooth'
-      });
-    }
-    setIsOpen(false);
-  };
+  // const scrollToSection = (sectionId) => {
+  //   const element = document.getElementById(sectionId);
+  //   if (element) {
+  //     window.scrollTo({
+  //       top: element.offsetTop - 80,
+  //       behavior: 'smooth'
+  //     });
+  //   }
+  //   setIsOpen(false);
+  // };
+ const scrollToSection = (id) => {
+  const el = document.getElementById(id);
+  if (el) {
+    const y = el.getBoundingClientRect().top + window.scrollY - 80;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  }
+};
+
+  const handleNavClick = (id) => {
+  if (location.pathname === '/') {
+    scrollToSection(id);
+  } else {
+    navigate('/', { state: { scrollTo: id } });
+  }
+};
 
   const navLinks = [
     { id: 'home', label: 'Home' },
@@ -40,7 +64,7 @@ const Navbar = ({ activeSection }) => {
   return (
     <motion.header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-background/90 backdrop-blur-lg shadow-sm' : 'bg-transparent'
+        scrolled ? 'bg-background/90 backdrop-blur-lg shadow-sm' : 'bg-gray-500/5 backdrop-blur-lg'
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -54,7 +78,7 @@ const Navbar = ({ activeSection }) => {
   transition={{ delay: 0.2, duration: 0.5 }}
 >
   <span className="text-3xl font-bold bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 bg-clip-text text-transparent">
-    SSK
+    <button onClick={()=>navigate('/')}>SSK</button>
   </span>
 </motion.div>
 
@@ -66,7 +90,7 @@ const Navbar = ({ activeSection }) => {
                 <motion.button
                   key={link.id}
                   className={`nav-link ${activeSection === link.id ? 'active' : ''}`}
-                  onClick={() => scrollToSection(link.id)}
+                  onClick={() => handleNavClick(link.id)}
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 * index + 0.3, duration: 0.4 }}
