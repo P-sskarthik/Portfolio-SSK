@@ -16,7 +16,7 @@ const Projects = () => {
       image: '/Game_image.jpg',
       category: 'ux',
       tags: ['User Research', 'Wireframing', 'Prototyping', 'Usability Testing'],
-      link: '#',
+      link: '',
     },
     {
       id: 2,
@@ -25,7 +25,7 @@ const Projects = () => {
       image: '/JTable.jpg',
       category: 'ux',
       tags: ['UX Research', 'low and High fidelity prototypes', 'UI Design', 'User persona','Wireframes'],
-      link: '', // We're routing this internally
+      link: '',
     },
     {
       id: 3,
@@ -118,18 +118,25 @@ const ProjectCard = ({ project, index }) => {
             )}
           </div>
 
-         
           <div className="flex gap-3">
-            {project.id === 2 ? (
+            {(project.id === 1 || project.id === 2) && (
               <Link
                 to={`/project/${project.id}`}
                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               >
-                <Button size="sm" variant="secondary" className="rounded-full">
-                  <Eye className="mr-1 h-4 w-4" /> View Details
-                </Button>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.97 }}
+                  transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                  className="relative px-4 py-2 text-sm font-medium bg-secondary text-primary rounded-full inline-flex items-center group"
+                >
+                  <Eye className="mr-1 h-4 w-4" />
+                  <span className="relative overflow-hidden">
+                    <span className="underline-animation">UX Case Study</span>
+                  </span>
+                </motion.button>
               </Link>
-            ) : null}
+            )}
 
             {project.link && (
               <a href={project.link} target="_blank" rel="noopener noreferrer">
