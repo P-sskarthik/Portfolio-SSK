@@ -1,7 +1,8 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import Navbar from "./Navbar";
-
+import { motion } from "framer-motion";
+import { Github, Linkedin, Dribbble } from "lucide-react";
 const ProjectDetail = () => {
   const { id } = useParams();
 
@@ -274,12 +275,7 @@ const ProjectDetail = () => {
         
             <img src="/Design8.jpg" width="1500" alt="Design 8" className="detail-image" />
             <h1 className="text-3xl">The user flow of the system is presented in this picture. It starts off with a home page. The app has a navigation menu where users can easily go from looking at the menu, booking a table, and checking their reservation.</h1>
-            <section className="text-center space-y-4">
-              <h1>Click the button below to check the prototype in action</h1>
-              <div className="flex justify-center gap-2">
-                <a href="https://www.figma.com/proto/aFXQczsK2Ya6rTqkfZEEDL/Digital-Wireframe?node-id=264-41" target="_blank" rel="noopener noreferrer" className="px-6 py-2 bg-orange-600 text-white rounded-full shadow hover:bg-orange-700">Lo-fi Prototype</a>
-              </div>
-            </section>
+           
             <img src="/Design9.jpg" width="1500" alt="Design 9" className="detail-image" />
 
             <section className="text-center space-y-4">
@@ -288,8 +284,97 @@ const ProjectDetail = () => {
                 <a href="https://www.figma.com/proto/aFXQczsK2Ya6rTqkfZEEDL/Digital-Wireframe?node-id=341-43" target="_blank" rel="noopener noreferrer" className="px-6 py-2 bg-orange-600 text-white rounded-full shadow hover:bg-orange-700">Hi-fi Prototype</a>
               </div>
             </section>
+            
+            <section className="grid md:grid-cols-2 gap-12 items-start">
+  {/* Impact Section */}
+  <div className="space-y-4">
+    <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center">
+      <span className="text-gray-900 text-2xl">📋</span>
+    </div>
+    <h2 className="text-2xl font-bold text-gray-900">Impact:</h2>
+    <p>
+      Many users find it inconvenient to book a table at local restaurants, especially when there’s no dedicated or user-friendly platform available. To address this issue, I designed a mobile app for Oishii, a Japanese restaurant, to simplify the reservation process while showcasing the restaurant’s unique ambiance and cuisine. One of the key challenges was designing for a wide range of users — from first-time diners to loyal customers. It was important to create an interface that felt warm, intuitive, and culturally inspired, while making sure the booking experience was seamless and efficient.
+    </p>
+  </div>
+
+  {/* What I Learned Section */}
+  <div className="space-y-4">
+    <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center">
+      <span className="text-gray-900 text-2xl">📖</span>
+    </div>
+    <h2 className="text-2xl font-bold text-gray-900">What I learned:</h2>
+    <p>
+      Working as a UX/UI designer on the Oishii restaurant booking app gave me valuable insights into designing for a broad and diverse user base. Some of the key takeaways from this project include:
+    </p>
+    <ul className="list-disc list-inside space-y-1">
+      <li>Designing with empathy for both tech-savvy and first-time users</li>
+      
+      <li>Ensuring accessibility across various age groups and comfort levels with mobile apps</li>
+      <li>Gathering and implementing feedback through user testing to refine the experience</li>
+    </ul>
+  </div>
+</section>
           </div>
         </div>
+
+        
+          <section className="bg-sky-200 text-gray-900 py-16 px-6">
+      <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+        
+        {/* Left Section: Text + Email + Resume */}
+        <div className="space-y-6 text-center md:text-left">
+          <h2 className="text-4xl font-bold">Get in touch</h2>
+
+          <div className="bg-white text-black px-4 py-2 rounded-md inline-block font-medium">
+            saisuryakarthik.p@gmail.com
+          </div>
+
+          <div>
+            <a
+              href="/Resume-Sai-Surya-Karthik.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-gray-800 hover:underline"
+            >
+              <span role="img" aria-label="chat">💬</span>
+              <span className="underline">Resume–Sai-Surya-Karthik.pdf</span>
+            </a>
+          </div>
+        </div>
+
+        {/* Right Section: Animated Social Icons */}
+        <motion.div
+          className="flex items-center gap-6 mt-6"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.2, duration: 0.5 }}
+        >
+          {[
+            { href: "https://github.com/P-sskarthik", icon: <Github size={22} /> },
+            { href: "https://www.linkedin.com/in/sai-surya-karthik-p-a80ba5197/", icon: <Linkedin size={22} /> },
+            { href: "https://behance.net/saisuryakarthik", icon: <Dribbble size={22} /> },
+          ].map((social, index) => (
+            <motion.a
+              key={index}
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-gray-800 p-3 rounded-full hover:bg-blue-100 transition-colors"
+              whileHover={{ y: -3, scale: 1.1 }}
+              aria-label={
+                social.href.includes("behance")
+                  ? "Behance Profile"
+                  : social.href.includes("linkedin")
+                  ? "LinkedIn Profile"
+                  : "GitHub Profile"
+              }
+            >
+              {social.icon}
+            </motion.a>
+          ))}
+        </motion.div>
+      </div>
+    </section>
       </Container>
     );
   }
@@ -306,13 +391,42 @@ const ProjectDetail = () => {
           <section className="grid md:grid-cols-2 gap-12">
             <div>
               <h2 className="text-xl font-semibold mb-2">Project Overview</h2>
-              <p>“Fin-Tastic Divisions” is a captivating and educational game crafted by a dynamic 12-member team. Designed specifically for first and second graders, the game submerges young learners in an ocean-themed world where I contributed as the UX/UI Designer. Our goal was to transform the abstract concept of division into a lively and interactive experience, making math both visual and meaningful for early learners.”</p>
+              <p>“Fin-Tastic Divisions is a captivating and educational game developed by a dynamic 12-member team, tailored specifically for first and second graders. Set in a vibrant, ocean-themed world, the game transforms the abstract concept of division into a fun, interactive, and visual experience designed to engage early learners. I contributed as the UX/UI Designer, focusing on creating intuitive interfaces and playful user flows that support young children's learning and cognitive abilities. The game was exclusively designed for Android device models.”</p>
             </div>
             <div>
               <h2 className="text-xl font-semibold mb-2">My Role & Responsibilities</h2>
-              <p>UX/UI Designer — responsible for designing game wireframes, low & high fidelity prototypes, user flows, and UI assets. Also contributed to character design, backgrounds, and basic animations using tools like Adobe Firefly and Sketchbook.</p>
+              <p>UX/UI Designer — responsible for designing game wireframes, low & high fidelity prototypes, user flows, and UI assets. Also contributed to character design, backgrounds, and basic animations using tools like Unity, Adobe Firefly and Sketchbook.</p>
             </div>
           </section>
+
+         <section className="px-6 py-12 overflow-x-auto">
+  <div className="flex justify-center">
+    <div className="flex space-x-4 w-max">
+      {[
+        "/Screen1.png",
+        "/Screen5.png"
+      ].map((src, index) => (
+        <img
+          key={index}
+          src={src}
+          alt={`Screen ${index + 1}`}
+          className="h-[500px] w-auto rounded-xl transition-transform hover:scale-105"
+        />
+      ))}
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
 
           <section className="space-y-8">
             <div className="space-y-4 text-base text-muted-foreground">
@@ -324,25 +438,272 @@ const ProjectDetail = () => {
               <p>Affinity diagrams helped us synthesize feedback from peers and test users. I mapped out a clear user flow diagram to ensure logical and child-friendly progression throughout the game.</p>
             </div>
           </section>
+          <section className="space-y-8">
+  <div className="space-y-4 text-base text-muted-foreground">
+    <h3 className="text-2xl font-extrabold tracking-tight text-gray-900">User Research</h3>
 
-          <div className="grid grid-cols-1 gap-6">
-            <img src="/Low.jpg" width="1500" alt="Low fidelity" className="detail-image" />
-            <img src="/PaperSketches.png" width="1500" alt="PaperSketches" className="detail-image" />
-            <img src="/GameCharacter1.jpg" width="1500" alt="Character Design" className="detail-image" />
-            <img src="/GameBackground1.jpg" width="1500" alt="Background Design" className="detail-image" />
-            <img src="/UserFlowDiagram.jpg" width="1500" alt="User Flow Diagram" className="detail-image" />
-            <img src="/AffinityDiagram.jpg" width="1500" alt="Affinity Diagram" className="detail-image" />
+    <p>
+      To better understand how to create an engaging game for kids, I started by chatting with my teammates to hear their thoughts and ideas. I also did some online research to explore what makes a game both fun and educational, especially for younger children.
+    </p>
+    <p>
+      Since I was working on a tight timeline, I used a <strong>qualitative research</strong> approach. This helped me gather quick insights into what kids enjoy and how to design an experience that's simple, interactive, and visually appealing.
+    </p>
+    <p>
+      These early findings helped shape the design direction of the game, making sure it was tailored for <strong>Android mobile devices</strong> and easy for kids to navigate and enjoy.
+    </p>
+  </div>
+</section>
+
+
+
+<section className="space-y-10 text-center">
+  <h2 className="text-2xl font-bold text-gray-900">User research: pain points</h2>
+
+  <div className="grid md:grid-cols-4 gap-8 text-sm text-gray-800">
+    {/* Pain Point 1 */}
+    <div className="space-y-4">
+      <div className="w-12 h-12 rounded-full bg-gray-100 mx-auto flex items-center justify-center text-xl font-bold text-blue-900">
+        1
+      </div>
+      <h3 className="font-semibold text-blue-700">Pain point</h3>
+      <p>
+        Division is a tough concept for kids to grasp, especially without
+        strong visuals or interactive guidance to make it click.
+      </p>
+    </div>
+
+    {/* Pain Point 2 */}
+    <div className="space-y-4">
+      <div className="w-12 h-12 rounded-full bg-gray-100 mx-auto flex items-center justify-center text-xl font-bold text-blue-900">
+        2
+      </div>
+      <h3 className="font-semibold text-blue-700">Pain point</h3>
+      <p>
+        Too much on-screen text can overwhelm younger learners who are still
+        developing their reading skills.
+      </p>
+    </div>
+
+    {/* Pain Point 3 */}
+    <div className="space-y-4">
+      <div className="w-12 h-12 rounded-full bg-gray-100 mx-auto flex items-center justify-center text-xl font-bold text-blue-900">
+        3
+      </div>
+      <h3 className="font-semibold text-blue-700">Pain point</h3>
+      <p>
+        Kids may lose interest quickly without rewards, animation, or progress
+        tracking to keep them motivated.
+      </p>
+    </div>
+
+    {/* Pain Point 4 */}
+    <div className="space-y-4">
+      <div className="w-12 h-12 rounded-full bg-gray-100 mx-auto flex items-center justify-center text-xl font-bold text-blue-900">
+        4
+      </div>
+      <h3 className="font-semibold text-blue-700">Pain point</h3>
+      <p>
+        Complex or small interface elements can be hard for kids to tap and
+        navigate on mobile devices.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section className="space-y-6">
+  <h2 className="text-2xl font-bold text-gray-900">Affinity Diagram & Iterations</h2>
+  <p className="text-gray-700">
+    After conducting user interviews and gathering feedback, I used an affinity diagram to group key insights and identify recurring themes. Based on those insights, I explored possible design solutions like voice assistance, slow transitions, and gentle animations to enhance usability for younger kids.
+  </p>
+
+  <div className="grid md:grid-cols-2 gap-6">
+    {/* Affinity Diagram */}
+    <div className="space-y-2">
+      <h3 className="text-lg font-semibold text-gray-800">Affinity Diagram</h3>
+      <img
+        src="/Affinity.jpg"
+        alt="Affinity Diagram Example"
+        className="rounded-lg shadow-md w-full"
+      />
+    </div>
+
+    {/* Solution Iteration Image */}
+    <div className="space-y-2">
+      <h3 className="text-lg font-semibold text-gray-800">Design Iterations</h3>
+      <img
+        src="/Solutions.jpg" // Replace with your actual image path
+        alt="Solution Iteration Highlights"
+        className="rounded-lg shadow-md w-full"
+      />
+    </div>
+  </div>
+</section>
+
+
+
+<section className=" text-black py-12 px-2">
+  <div className="max-w-2xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+    
+    {/* Left side title */}
+    <div className="text-center md:text-left">
+      <h2 className="text-2xl font-extrabold leading-tight">
+        Starting<br />the design
+      </h2>
+    </div>
+
+    {/* Divider + List */}
+    <div className="flex md:border-l border-black pl-10">
+      <ul className="space-y-4 text-lg font-medium">
+        <li>• Paper wireframes</li>
+        <li>• Low-fidelity prototype</li>
+        <li>• High-fidelity prototype</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<section className="space-y-8">
+  <div className="space-y-4 text-base text-muted-foreground">
+    <h3 className="text-2xl font-extrabold tracking-tight text-gray-900">Paper wireframes</h3>
+    <img
+      src="/Paper.jpg"
+      width="1500"
+      alt="PaperSketches"
+      className="detail-image rounded-lg shadow-md"
+    />
+  </div>
+</section>
+
+<section className="space-y-8">
+  <div className="space-y-4 text-base text-muted-foreground">
+    <h3 className="text-2xl font-extrabold tracking-tight text-gray-900">Low-fidelity prototype</h3>
+    <img
+      src="/Low.jpg"
+      width="1500"
+      alt="LowFidelitySketches"
+      className="detail-image rounded-lg shadow-md"
+    />
+  </div>
+</section>
+
+<section className="space-y-8">
+  <div className="space-y-4 text-base text-muted-foreground">
+    <h3 className="text-2xl font-extrabold tracking-tight text-gray-900">High-fidelity prototype</h3>
+    <img
+      src="/High.jpg"
+      width="1500"
+      alt="HighFidelityScreens"
+      className="detail-image rounded-lg shadow-md"
+    />
+  </div>
+
+   <section className="text-center space-y-4">
+              <h1>Click the button below to check the prototype in action</h1>
+              <div className="flex justify-center gap-4">
+                <a href="https://www.figma.com/proto/aFXQczsK2Ya6rTqkfZEEDL/Digital-Wireframe?node-id=146-344&p=f&t=240X13pvbDeLnxrm-0&scaling=scale-down&content-scaling=fixed&page-id=134%3A186&starting-point-node-id=146%3A344" target="_blank" rel="noopener noreferrer" className="px-6 py-2 bg-orange-600 text-white rounded-full shadow hover:bg-orange-700">Hi-fi Prototype</a>
+              </div>
+            </section>
+</section>
+
+<section className="grid md:grid-cols-2 gap-12 items-start">
+  {/* Impact Section */}
+  <div className="space-y-4">
+    <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center">
+      <span className="text-gray-900 text-2xl">📋</span>
+    </div>
+    <h2 className="text-2xl font-bold text-gray-900">Impact:</h2>
+    <p>
+      Many children find it difficult to connect with traditional ways of learning math,
+      especially when it comes to abstract concepts like division. To help solve this
+      problem, I designed an interactive game that turns math into a fun, visual experience.
+      One of the biggest challenges was designing for young learners aged 6 to 8, who are
+      just starting to explore educational technology. It was important to keep the
+      interface simple, intuitive, and engaging while ensuring the content stayed educational
+      and effective.
+    </p>
+  </div>
+
+  {/* What I Learned Section */}
+  <div className="space-y-4">
+    <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center">
+      <span className="text-gray-900 text-2xl">📖</span>
+    </div>
+    <h2 className="text-2xl font-bold text-gray-900">What I learned:</h2>
+    <p>
+      Working as a UX/UI designer on an educational game for kids taught me a lot about
+      designing for young users. Some of the key takeaways include:
+    </p>
+    <ul className="list-disc list-inside space-y-1">
+      <li>Designing with empathy for early learners</li>
+      <li>Keeping interfaces playful, clear, and intuitive</li>
+      <li>Balancing fun with educational value</li>
+      <li>Gathering and applying feedback from both peers and child-friendly testing</li>
+    </ul>
+  </div>
+</section>
+  
+        </div>
+        <section className="bg-sky-200 text-gray-900 py-16 px-6">
+      <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+        
+        {/* Left Section: Text + Email + Resume */}
+        <div className="space-y-6 text-center md:text-left">
+          <h2 className="text-4xl font-bold">Get in touch</h2>
+
+          <div className="bg-white text-black px-4 py-2 rounded-md inline-block font-medium">
+            saisuryakarthik.p@gmail.com
           </div>
 
-          <section className="text-center space-y-6">
-            <h3 className="text-xl font-bold">Click below to explore prototypes</h3>
-            <div className="flex justify-center gap-4">
-              <a target="_blank" rel="noopener noreferrer" className="px-6 py-2 bg-blue-600 text-white rounded-full shadow hover:bg-blue-700">Lo-fi Prototype</a>
-              <a href="https://www.figma.com/proto/aFXQczsK2Ya6rTqkfZEEDL/Digital-Wireframe?node-id=146-344&p=f&t=4a66W5m1Cmm0Wwf6-0&scaling=scale-down&content-scaling=fixed&page-id=134%3A186&starting-point-node-id=146%3A344" target="_blank" rel="noopener noreferrer" className="px-6 py-2 bg-purple-600 text-white rounded-full shadow hover:bg-purple-700">Hi-fi Prototype</a>
-            </div>
-          </section>
+          <div>
+            <a
+              href="/Resume-Sai-Surya-Karthik.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-gray-800 hover:underline"
+            >
+              <span role="img" aria-label="chat">💬</span>
+              <span className="underline">Resume–Sai-Surya-Karthik.pdf</span>
+            </a>
+          </div>
         </div>
+
+        {/* Right Section: Animated Social Icons */}
+        <motion.div
+          className="flex items-center gap-6 mt-6"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.2, duration: 0.5 }}
+        >
+          {[
+            { href: "https://github.com/P-sskarthik", icon: <Github size={22} /> },
+            { href: "https://www.linkedin.com/in/sai-surya-karthik-p-a80ba5197/", icon: <Linkedin size={22} /> },
+            { href: "https://behance.net/saisuryakarthik", icon: <Dribbble size={22} /> },
+          ].map((social, index) => (
+            <motion.a
+              key={index}
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-gray-800 p-3 rounded-full hover:bg-blue-100 transition-colors"
+              whileHover={{ y: -3, scale: 1.1 }}
+              aria-label={
+                social.href.includes("behance")
+                  ? "Behance Profile"
+                  : social.href.includes("linkedin")
+                  ? "LinkedIn Profile"
+                  : "GitHub Profile"
+              }
+            >
+              {social.icon}
+            </motion.a>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+
       </Container>
+      
     );
   }
 

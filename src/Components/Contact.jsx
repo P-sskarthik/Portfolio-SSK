@@ -107,30 +107,7 @@ const Contact = () => {
             ))}
           </div>
 
-          <div className="bg-card border border-primary/5 rounded-xl p-6 shadow-lg">
-            <h4 className="font-semibold mb-4">Let's Connect</h4>
-            <p className="text-muted-foreground mb-6">
-              Follow me on social media or check out my work on these platforms.
-            </p>
-            <div className="flex space-x-4">
-              {['github', 'linkedin', 'dribbble'].map((platform, index) => (
-                <motion.a
-                  key={platform}
-                  href={`https://${platform}.com`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-3 bg-secondary/50 rounded-full hover:bg-primary/10 transition-colors"
-                  whileHover={{ y: -5 }}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.3, delay: index * 0.1 }}
-                >
-                  <img alt={`${platform} icon`} className="w-5 h-5" src="https://images.unsplash.com/photo-1688539023764-c8282edc1502" />
-                </motion.a>
-              ))}
-            </div>
-          </div>
+          
         </motion.div>
 
         <motion.div
