@@ -5,12 +5,8 @@ import { Button } from "@/components/ui/button";
 import { useToast } from "@/components/ui/use-toast";
 
 const Contact = () => {
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
+  const  toast  = useToast(); // ✅ called inside component
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
@@ -64,11 +60,12 @@ const Contact = () => {
       >
         <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In <span className="gradient-text">Touch</span></h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">
-          Have a project in mind or want to discuss potential opportunities? I'd love to hear from you. Fill out the form below or reach out directly.
+          Have a project in mind or want to discuss potential opportunities? I'd love to hear from you.
         </p>
       </motion.div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        {/* Contact Info */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -76,7 +73,6 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
         >
           <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
-
           <div className="space-y-6 mb-8">
             {contactInfo.map((item, index) => (
               <motion.div
@@ -93,10 +89,7 @@ const Contact = () => {
                 <div>
                   <h4 className="font-medium">{item.title}</h4>
                   {item.link ? (
-                    <a
-                      href={item.link}
-                      className="text-muted-foreground hover:text-primary transition-colors"
-                    >
+                    <a href={item.link} className="text-muted-foreground hover:text-primary transition-colors">
                       {item.value}
                     </a>
                   ) : (
@@ -106,10 +99,9 @@ const Contact = () => {
               </motion.div>
             ))}
           </div>
-
-          
         </motion.div>
 
+        {/* Contact Form */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -121,9 +113,7 @@ const Contact = () => {
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-2">
-                  Your Name
-                </label>
+                <label htmlFor="name" className="block text-sm font-medium mb-2">Your Name</label>
                 <input
                   type="text"
                   id="name"
@@ -131,15 +121,13 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg contact-input border-1"
+                  className="w-full px-4 py-3 rounded-lg contact-input border"
                   placeholder="John Doe"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-2">
-                  Your Email
-                </label>
+                <label htmlFor="email" className="block text-sm font-medium mb-2">Your Email</label>
                 <input
                   type="email"
                   id="email"
@@ -147,15 +135,13 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg contact-input border-1"
+                  className="w-full px-4 py-3 rounded-lg contact-input border"
                   placeholder="john@example.com"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-2">
-                  Your Message
-                </label>
+                <label htmlFor="message" className="block text-sm font-medium mb-2">Your Message</label>
                 <textarea
                   id="message"
                   name="message"
@@ -163,21 +149,17 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 rounded-lg contact-input resize-none border-1"
+                  className="w-full px-4 py-3 rounded-lg contact-input resize-none border"
                   placeholder="Hello, I'd like to talk about..."
                 />
               </div>
 
-              <Button
-                type="submit"
-                className="w-full py-6"
-                disabled={isSubmitting}
-              >
+              <Button type="submit" className="w-full py-6" disabled={isSubmitting}>
                 {isSubmitting ? (
                   <span className="flex items-center">
-                    <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" viewBox="0 0 24 24">
                       <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.4 0 0 5.4 0 12h4z"></path>
                     </svg>
                     Sending...
                   </span>

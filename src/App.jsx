@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Toaster } from './components/ui/toaster';
+import { Toaster } from '@/components/ui/toaster';
 
 
 import Navbar from '@/components/Navbar';
