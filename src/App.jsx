@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Toaster } from '@/components/ui/toaster';
+import { Toaster } from '@/Components/UI/toaster';
 
 
-import Navbar from '@/components/Navbar';
-import Hero from '@/components/Hero';
-import Projects from '@/components/Projects';
-import Skills from '@/components/Skills';
-import Contact from '@/components/Contact';
-import Footer from '@/components/Footer';
+import Navbar from '@/Components/Navbar';
+import Hero from '@/Components/Hero';
+import Projects from '@/Components/Projects';
+import Skills from '@/Components/Skills';
+import Contact from '@/Components/Contact';
+import Footer from '@/Components/Footer';
 
 const App = () => {
   const [activeSection, setActiveSection] = useState('home');
