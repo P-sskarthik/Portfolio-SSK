@@ -1,65 +1,46 @@
-
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, Download } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/Components/UI/button'; // ✅ Correct casing
 
 const Navbar = ({ activeSection }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const navigate = useNavigate();
-  const location = useLocation(); 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     setScrolled(window.scrollY > 20);
-  //   };
+  const location = useLocation();
 
-  //   window.addEventListener('scroll', handleScroll);
-  //   return () => window.removeEventListener('scroll', handleScroll);
-  // }, []);
+  useEffect(() => {
+    if (location.state?.scrollTo) {
+      scrollToSection(location.state.scrollTo);
+    }
+  }, [location]);
 
-useEffect(() => {
-  if (location.state?.scrollTo) {
-    const id = location.state.scrollTo;
-    scrollToSection(id);
-  }
-}, [location]);
-
-  // const scrollToSection = (sectionId) => {
-  //   const element = document.getElementById(sectionId);
-  //   if (element) {
-  //     window.scrollTo({
-  //       top: element.offsetTop - 80,
-  //       behavior: 'smooth'
-  //     });
-  //   }
-  //   setIsOpen(false);
-  // };
- const scrollToSection = (id) => {
-  const el = document.getElementById(id);
-  if (el) {
-    const y = el.getBoundingClientRect().top + window.scrollY - 80;
-    window.scrollTo({ top: y, behavior: 'smooth' });
-  }
-};
+  const scrollToSection = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      const y = el.getBoundingClientRect().top + window.scrollY - 80;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+    setIsOpen(false);
+  };
 
   const handleNavClick = (id) => {
-  if (location.pathname === '/') {
-    scrollToSection(id);
-  } else {
-    navigate('/', { state: { scrollTo: id } });
-  }
-};
+    if (location.pathname === '/') {
+      scrollToSection(id);
+    } else {
+      navigate('/', { state: { scrollTo: id } });
+    }
+  };
 
   const navLinks = [
     { id: 'home', label: 'Home' },
     { id: 'projects', label: 'Projects' },
     { id: 'skills', label: 'Skills' },
-    { id: 'contact', label: 'Contact' }
+    { id: 'contact', label: 'Contact' },
   ];
 
-  const resumePath = '/ssk-resume.pdf'; // Placeholder path
+  const resumePath = '/ssk-resume.pdf';
 
   return (
     <motion.header
@@ -72,16 +53,15 @@ useEffect(() => {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-        <motion.div
-  initial={{ opacity: 0, x: -20 }}
-  animate={{ opacity: 1, x: 0 }}
-  transition={{ delay: 0.2, duration: 0.5 }}
->
-  <span className="text-3xl font-bold bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 bg-clip-text text-transparent">
-    <button onClick={()=>navigate('/')}>SSK</button>
-  </span>
-</motion.div>
-
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+          >
+            <span className="text-3xl font-bold bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 bg-clip-text text-transparent">
+              <button onClick={() => navigate('/')}>SSK</button>
+            </span>
+          </motion.div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6">
@@ -114,14 +94,18 @@ useEffect(() => {
             </motion.div>
           </div>
 
-
-          {/* Mobile Navigation Toggle */}
+          {/* Mobile Navigation */}
           <div className="md:hidden flex items-center">
-             <Button variant="ghost" size="icon" asChild className="mr-2 text-foreground/80 hover:text-foreground">
-               <a href={resumePath} download="ssk-resume.pdf" aria-label="Download Resume">
-                 <Download size={20} />
-               </a>
-             </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              asChild
+              className="mr-2 text-foreground/80 hover:text-foreground"
+            >
+              <a href={resumePath} download="ssk-resume.pdf" aria-label="Download Resume">
+                <Download size={20} />
+              </a>
+            </Button>
             <Button
               variant="ghost"
               size="icon"
@@ -135,11 +119,10 @@ useEffect(() => {
         </div>
       </div>
 
-      {/* Mobile Navigation Menu */}
-      <AnimatedMobileMenu 
-        isOpen={isOpen} 
-        navLinks={navLinks} 
-        activeSection={activeSection} 
+      <AnimatedMobileMenu
+        isOpen={isOpen}
+        navLinks={navLinks}
+        activeSection={activeSection}
         onLinkClick={scrollToSection}
         resumePath={resumePath}
       />
@@ -152,13 +135,13 @@ const AnimatedMobileMenu = ({ isOpen, navLinks, activeSection, onLinkClick, resu
     open: {
       opacity: 1,
       height: 'auto',
-      transition: { staggerChildren: 0.07, delayChildren: 0.2 }
+      transition: { staggerChildren: 0.07, delayChildren: 0.2 },
     },
     closed: {
       opacity: 0,
       height: 0,
-      transition: { staggerChildren: 0.05, staggerDirection: -1, when: "afterChildren" }
-    }
+      transition: { staggerChildren: 0.05, staggerDirection: -1, when: 'afterChildren' },
+    },
   };
 
   const itemVariants = {
@@ -166,23 +149,23 @@ const AnimatedMobileMenu = ({ isOpen, navLinks, activeSection, onLinkClick, resu
       y: 0,
       opacity: 1,
       transition: {
-        y: { stiffness: 1000, velocity: -100 }
-      }
+        y: { stiffness: 1000, velocity: -100 },
+      },
     },
     closed: {
       y: 50,
       opacity: 0,
       transition: {
-        y: { stiffness: 1000 }
-      }
-    }
+        y: { stiffness: 1000 },
+      },
+    },
   };
 
   return (
     <motion.div
       className="md:hidden overflow-hidden"
       initial="closed"
-      animate={isOpen ? "open" : "closed"}
+      animate={isOpen ? 'open' : 'closed'}
       variants={menuVariants}
     >
       <div className="bg-background/95 backdrop-blur-md px-4 py-5 shadow-lg">
@@ -191,23 +174,25 @@ const AnimatedMobileMenu = ({ isOpen, navLinks, activeSection, onLinkClick, resu
             <motion.button
               key={link.id}
               variants={itemVariants}
-              className={`nav-link text-lg w-full text-left py-3 ${activeSection === link.id ? 'active' : ''}`}
+              className={`nav-link text-lg w-full text-left py-3 ${
+                activeSection === link.id ? 'active' : ''
+              }`}
               onClick={() => onLinkClick(link.id)}
               whileTap={{ scale: 0.95 }}
             >
               {link.label}
             </motion.button>
           ))}
-           <motion.a
-              href={resumePath}
-              download="ssk-resume.pdf"
-              variants={itemVariants}
-              className="nav-link text-lg w-full text-left py-3 inline-flex items-center"
-              whileTap={{ scale: 0.95 }}
-            >
-              <Download className="mr-2 h-5 w-5" />
-              Resume
-            </motion.a>
+          <motion.a
+            href={resumePath}
+            download="ssk-resume.pdf"
+            variants={itemVariants}
+            className="nav-link text-lg w-full text-left py-3 inline-flex items-center"
+            whileTap={{ scale: 0.95 }}
+          >
+            <Download className="mr-2 h-5 w-5" />
+            Resume
+          </motion.a>
         </nav>
       </div>
     </motion.div>
