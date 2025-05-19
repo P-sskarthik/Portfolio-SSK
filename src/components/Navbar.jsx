@@ -102,7 +102,7 @@ const Navbar = ({ activeSection }) => {
               asChild
               className="mr-2 text-foreground/80 hover:text-foreground"
             >
-              <a href={resumePath} download="ssk-resume.pdf" aria-label="Download Resume">
+              <a href={resumePath} download="Resume-Sai-Surya-Karthik.pdf" aria-label="Download Resume">
                 <Download size={20} />
               </a>
             </Button>
