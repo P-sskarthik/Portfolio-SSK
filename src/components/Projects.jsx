@@ -90,6 +90,14 @@ const Projects = () => {
 };
 
 const ProjectCard = ({ project, index }) => {
+  const [showOverlay, setShowOverlay] = useState(false);
+
+  const toggleOverlay = () => {
+    if (window.innerWidth < 768) {
+      setShowOverlay(!showOverlay);
+    }
+  };
+
   return (
     <motion.div
       className="project-card group bg-card rounded-xl overflow-hidden shadow-lg border border-primary/5"
@@ -99,15 +107,13 @@ const ProjectCard = ({ project, index }) => {
       transition={{ duration: 0.5, delay: index * 0.1 }}
       whileHover={{ y: -5 }}
     >
-      <div className="relative h-100">
+      <div className="relative h-100 cursor-pointer" onClick={toggleOverlay}>
         <img
           alt={project.title}
           className="w-full h-full object-cover"
           src={project.image}
         />
-        <div className="absolute inset-0 bg-black/70 p-4 text-white flex flex-col justify-end
-          opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300"
-        >
+        <div className={`absolute inset-0 bg-black/70 p-4 text-white flex flex-col justify-end transition-opacity duration-300 ${showOverlay ? 'opacity-100' : 'opacity-0'} md:opacity-0 md:group-hover:opacity-100`}>
           <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
           <p className="text-sm mb-4">{project.description}</p>
 

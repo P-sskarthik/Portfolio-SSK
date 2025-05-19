@@ -420,15 +420,6 @@ const ProjectDetail = () => {
 
 
 
-
-
-
-
-
-
-
-
-
           <section className="space-y-8">
             <div className="space-y-4 text-base text-muted-foreground">
               <p><strong>FIN-TASTIC DIVISION Game Design</strong></p>
