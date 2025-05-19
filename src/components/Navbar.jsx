@@ -2,13 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, Download } from 'lucide-react';
-import { Button } from '@/components/ui/button'; // ✅ Correct casing
+import { Button } from '@/components/ui/button';
 
 const Navbar = ({ activeSection }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+
+  const resumePath = '/Resume-Sai-Surya-Karthik.pdf'; // ✅ Resume placed in /public
 
   useEffect(() => {
     if (location.state?.scrollTo) {
@@ -39,8 +41,6 @@ const Navbar = ({ activeSection }) => {
     { id: 'skills', label: 'Skills' },
     { id: 'contact', label: 'Contact' },
   ];
-
-  const resumePath = '/ssk-resume.pdf';
 
   return (
     <motion.header
