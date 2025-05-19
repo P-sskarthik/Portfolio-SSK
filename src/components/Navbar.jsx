@@ -185,7 +185,7 @@ const AnimatedMobileMenu = ({ isOpen, navLinks, activeSection, onLinkClick, resu
           ))}
           <motion.a
             href={resumePath}
-            download="ssk-resume.pdf"
+            download="Resume-Sai-Surya-Karthik.pdf"
             variants={itemVariants}
             className="nav-link text-lg w-full text-left py-3 inline-flex items-center"
             whileTap={{ scale: 0.95 }}
