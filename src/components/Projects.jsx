@@ -24,7 +24,7 @@ const Projects = () => {
       description: 'A complete UX Research & UX design of a Japanese-style restaurant reservation app, aimed at enhancing booking efficiency, user satisfaction, and visual appeal through intuitive navigation and culturally-inspired design.',
       image: '/JTable.jpg',
       category: 'ux',
-      tags: ['UX Research', 'low and High fidelity prototypes', 'UI Design', 'User persona','Wireframes'],
+      tags: ['UX Research', 'low and High fidelity prototypes', 'UI Design', 'User persona', 'Wireframes'],
       link: '',
     },
     {
@@ -33,7 +33,7 @@ const Projects = () => {
       description: 'Netflix-GPT is a dynamic web application developed using React and Redux that integrates (AI) to deliver personalized movie recommendations.',
       image: '/Netflixgpt.jpg',
       category: 'frontend',
-      tags: ['React', 'Tailwind CSS', 'Redux', 'GPT-APIs','TMDB API','Framer Motion', 'Responsive Design'],
+      tags: ['React', 'Tailwind CSS', 'Redux', 'GPT-APIs', 'TMDB API', 'Framer Motion', 'Responsive Design'],
       link: 'https://main.d3fcn6oik0lorx.amplifyapp.com/',
     },
     {
@@ -47,8 +47,8 @@ const Projects = () => {
     },
   ];
 
-  const filteredProjects = activeTab === 'all' 
-    ? projects 
+  const filteredProjects = activeTab === 'all'
+    ? projects
     : projects.filter(project => project.category === activeTab);
 
   return (
@@ -105,7 +105,9 @@ const ProjectCard = ({ project, index }) => {
           className="w-full h-full object-cover"
           src={project.image}
         />
-        <div className="absolute inset-0 bg-black/70 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end text-white">
+        <div className="absolute inset-0 bg-black/70 p-4 text-white flex flex-col justify-end
+          opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300"
+        >
           <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
           <p className="text-sm mb-4">{project.description}</p>
 

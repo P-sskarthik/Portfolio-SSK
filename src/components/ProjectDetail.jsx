@@ -40,11 +40,12 @@ const ProjectDetail = () => {
             </div>
              
           </section>
-          <img
-             src="/MM.png"
-             alt="Design 2"
-             className=" pl-[180px] detail-image h-170 w-auto" 
-              />
+        <img
+  src="/MM.png"
+  alt="Design 2"
+  className="detail-image w-full max-w-3xl h-auto mx-auto rounded-md shadow-md"
+/>
+
 
 
           
