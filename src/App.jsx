@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-import Navbar from '@/components/Navbar';
-import Hero from '@/components/Hero';
-import Projects from '@/components/Projects';
-import Skills from '@/components/Skills';
-import Contact from '@/components/Contact';
-import Footer from '@/components/Footer';
+import Navbar from '@/components/Navbar.jsx';
+import Hero from '@/components/Hero.jsx';
+import Projects from '@/components/Projects.jsx';
+import Skills from '@/components/Skills.jsx';
+import Contact from '@/components/Contact.jsx';
+import Footer from '@/components/Footer.jsx';
+
 
 const App = () => {
   const [activeSection, setActiveSection] = useState('home');
