@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Toaster } from '../src/Components/UI/toaster';
-
 
 import Navbar from '@/Components/Navbar';
 import Hero from '@/Components/Hero';
@@ -12,12 +10,9 @@ import Footer from '@/Components/Footer';
 
 const App = () => {
   const [activeSection, setActiveSection] = useState('home');
-  const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrollY(window.scrollY);
-
       const sections = ['home', 'projects', 'skills', 'contact'];
 
       for (const section of sections) {
@@ -40,13 +35,13 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-[#e6f0f8] text-gray-900 antialiased font-sans leading-relaxed relative overflow-hidden">
+      
       {/* Animated 3D effect blobs */}
-<div className="absolute inset-0 -z-10 overflow-hidden">
-  <div className="absolute top-[-100px] left-[-100px] w-[300px] h-[300px] bg-gradient-to-tr from-blue-300 to-purple-300 rounded-full blur-3xl opacity-40 animate-float-slow" />
-  <div className="absolute bottom-[-120px] right-[-120px] w-[350px] h-[350px] bg-gradient-to-br from-cyan-200 to-indigo-300 rounded-full blur-2xl opacity-30 animate-float" />
-  <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 w-[250px] h-[250px] bg-gradient-to-br from-sky-200 to-purple-200 rounded-full blur-2xl opacity-20 animate-float-slow" />
-</div>
-
+      <div className="absolute inset-0 -z-10 overflow-hidden">
+        <div className="absolute top-[-100px] left-[-100px] w-[300px] h-[300px] bg-gradient-to-tr from-blue-300 to-purple-300 rounded-full blur-3xl opacity-40 animate-float-slow" />
+        <div className="absolute bottom-[-120px] right-[-120px] w-[350px] h-[350px] bg-gradient-to-br from-cyan-200 to-indigo-300 rounded-full blur-2xl opacity-30 animate-float" />
+        <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 w-[250px] h-[250px] bg-gradient-to-br from-sky-200 to-purple-200 rounded-full blur-2xl opacity-20 animate-float-slow" />
+      </div>
 
       <Navbar activeSection={activeSection} />
 
@@ -78,7 +73,6 @@ const App = () => {
       </main>
 
       <Footer />
-      <Toaster />
     </div>
   );
 };

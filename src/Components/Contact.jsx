@@ -2,10 +2,8 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Send, Mail, Phone, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useToast } from "@/components/ui/use-toast";
 
 const Contact = () => {
-  const  toast  = useToast(); // ✅ called inside component
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -20,10 +18,7 @@ const Contact = () => {
 
     setTimeout(() => {
       setIsSubmitting(false);
-      toast({
-        title: "Message sent!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
-      });
+      alert("Message sent! Thank you for reaching out. I'll get back to you soon.");
       setFormData({ name: '', email: '', message: '' });
     }, 1500);
   };
