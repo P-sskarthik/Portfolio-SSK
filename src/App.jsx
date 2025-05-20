@@ -66,9 +66,9 @@ const App = () => {
               <Skills />
             </section>
 
-            <section id="contact" className="py-20">
+            {/* <section id="contact" className="py-20">
               <Contact />
-            </section>
+            </section> */}
           </motion.div>
         </AnimatePresence>
       </main>
