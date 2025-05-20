@@ -268,6 +268,30 @@ const ProjectDetail = () => {
   </div>
 </section>
 
+<section className="grid md:grid-cols-2 gap-8 items-start">
+  {/* Text Content */}
+  <div className="space-y-6 max-w-xl">
+    <div className="flex items-center space-x-4">
+      
+      <h2 className="text-3xl font-bold text-gray-900">Crazy Eights</h2>
+    </div>
+    <p className="text-gray-700 leading-relaxed">
+      To explore a wide range of layout ideas quickly, I used the Crazy Eights ideation method. This helped me sketch eight different UI concepts within a short time, encouraging creative variety before locking in any design direction.
+    </p>
+    <p className="text-gray-700 leading-relaxed">
+      It was especially useful for brainstorming different home screen and menu interactions that felt simple yet culturally appropriate for a Japanese restaurant audience.
+    </p>
+  </div>
+
+  {/* Image Content */}
+  <div className="w-full">
+    <img
+      src="/CrazyEights.jpg" // Update path as needed
+      alt="Crazy Eights Sketches"
+      className="w-full rounded-lg shadow-md object-cover"
+    />
+  </div>
+</section>
 
 
 
@@ -285,6 +309,83 @@ const ProjectDetail = () => {
                 <a href="https://www.figma.com/proto/aFXQczsK2Ya6rTqkfZEEDL/Digital-Wireframe?node-id=341-43" target="_blank" rel="noopener noreferrer" className="px-6 py-2 bg-orange-600 text-white rounded-full shadow hover:bg-orange-700">Hi-fi Prototype</a>
               </div>
             </section>
+
+            <section className="text-center space-y-10">
+  <h2 className="text-3xl font-semibold text-gray-800">Usability study: findings</h2>
+  <p className="text-gray-600 max-w-xl mx-auto">
+    Usability study was conducted for both Low-Fidelity Prototype & High-Fidelity Prototype
+  </p>
+
+  <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+    {/* Round 1 Findings */}
+    <div className="bg-gray-50 p-6 rounded-lg space-y-4">
+      <h3 className="text-xl font-bold text-orange-500">Round 1 findings</h3>
+      <div className="flex items-start space-x-4">
+        <div className="w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold">1</div>
+        <p className="text-gray-700">User-Friendly Interface</p>
+      </div>
+      <div className="flex items-start space-x-4">
+        <div className="w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold">2</div>
+        <p className="text-gray-700">Include description in the Menu bar</p>
+      </div>
+      <div className="flex items-start space-x-4">
+        <div className="w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold">3</div>
+        <p className="text-gray-700">Edit the Booking</p>
+      </div>
+    </div>
+
+    {/* Round 2 Findings */}
+    <div className="bg-gray-50 p-6 rounded-lg space-y-4">
+      <h3 className="text-xl font-bold text-orange-500">Round 2 findings</h3>
+      <div className="flex items-start space-x-4">
+        <div className="w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold">1</div>
+        <p className="text-gray-700">Insert Social Media plug-ins</p>
+      </div>
+      <div className="flex items-start space-x-4">
+        <div className="w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold">2</div>
+        <p className="text-gray-700">Food allergen icons</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section className="text-center space-y-12">
+  <h2 className="text-3xl font-semibold text-gray-800">Accessibility considerations</h2>
+
+  <div className="grid md:grid-cols-3 gap-8">
+    {/* Card 1 */}
+    <div className="bg-gray-50 p-6 rounded-lg space-y-4">
+      <div className="w-12 h-12 rounded-full bg-green-600 text-white flex items-center justify-center mx-auto text-lg font-semibold">
+        1
+      </div>
+      <p className="text-gray-700">
+        To make the navigation easier, we added icons for quick recognition. And just in case the icons aren’t obvious to everyone, we also included clear text labels underneath.
+      </p>
+    </div>
+
+    {/* Card 2 */}
+    <div className="bg-gray-50 p-6 rounded-lg space-y-4">
+      <div className="w-12 h-12 rounded-full bg-green-600 text-white flex items-center justify-center mx-auto text-lg font-semibold">
+        2
+      </div>
+      <p className="text-gray-700">
+        Not everyone knows what each dish is — so we made sure to use lots of pictures to help users understand the menu visually, especially if they’re new to the cuisine.
+      </p>
+    </div>
+
+    {/* Card 3 */}
+    <div className="bg-gray-50 p-6 rounded-lg space-y-4">
+      <div className="w-12 h-12 rounded-full bg-green-600 text-white flex items-center justify-center mx-auto text-lg font-semibold">
+        3
+      </div>
+      <p className="text-gray-700">
+       We used large, legible fonts and high color contrast to make sure the content is easy to read for users with visual impairments or low vision.
+      </p>
+    </div>
+  </div>
+</section>
+
+
             
             <section className="grid md:grid-cols-2 gap-12 items-start">
   {/* Impact Section */}

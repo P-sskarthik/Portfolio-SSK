@@ -86,7 +86,7 @@ const Navbar = ({ activeSection }) => {
               transition={{ delay: 0.1 * navLinks.length + 0.3, duration: 0.4 }}
             >
               <Button variant="outline" size="sm" asChild>
-                <a href={resumePath} download="ssk-resume.pdf">
+                <a href={resumePath} download="Resume-Sai-Surya-Karthik.pdf">
                   <Download className="mr-2 h-4 w-4" />
                   Resume
                 </a>
