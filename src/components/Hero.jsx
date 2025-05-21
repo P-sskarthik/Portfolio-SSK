@@ -72,11 +72,11 @@ const Hero = () => {
             </Button>
           </motion.div>
 
-          <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}>
+          {/* <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}>
             <Button size="lg" variant="outline" asChild>
               <a href="#contact">Get In Touch</a>
             </Button>
-          </motion.div>
+          </motion.div> */}
         </motion.div>
 
         <motion.div

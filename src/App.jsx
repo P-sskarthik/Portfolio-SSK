@@ -14,7 +14,7 @@ const App = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'projects', 'skills', 'contact'];
+      const sections = ['home', 'projects', 'skills'];
 
       for (const section of sections) {
         const element = document.getElementById(section);
