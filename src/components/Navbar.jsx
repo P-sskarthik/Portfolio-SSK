@@ -10,11 +10,37 @@ const Navbar = ({ activeSection }) => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const resumePath = '/Resume-Sai-Surya-Karthik.pdf'; // ✅ Resume placed in /public
+  const resumePath = '/Resume-Sai-Surya-Karthik.pdf';
 
+  // Track page scroll to style navbar
   useEffect(() => {
-    if (location.state?.scrollTo) {
-      scrollToSection(location.state.scrollTo);
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  // Handle scroll from navigation state or sessionStorage
+  useEffect(() => {
+    const target = location.state?.scrollTo || sessionStorage.getItem('scrollTarget');
+
+    if (target) {
+      const tryScroll = () => {
+        const el = document.getElementById(target);
+        if (el) {
+          scrollToSection(target);
+          sessionStorage.removeItem('scrollTarget');
+        } else {
+          setTimeout(() => {
+            const retryEl = document.getElementById(target);
+            if (retryEl) {
+              scrollToSection(target);
+              sessionStorage.removeItem('scrollTarget');
+            }
+          }, 300); // Retry if not ready
+        }
+      };
+
+      setTimeout(tryScroll, 300); // Initial delay for DOM to load
     }
   }, [location]);
 
@@ -23,14 +49,18 @@ const Navbar = ({ activeSection }) => {
     if (el) {
       const y = el.getBoundingClientRect().top + window.scrollY - 80;
       window.scrollTo({ top: y, behavior: 'smooth' });
+      setTimeout(() => setIsOpen(false), 400); // Delay closing menu
+    } else {
+      setIsOpen(false);
     }
-    setIsOpen(false);
   };
 
   const handleNavClick = (id) => {
     if (location.pathname === '/') {
       scrollToSection(id);
     } else {
+      sessionStorage.setItem('scrollTarget', id); // Store scroll target
+      setIsOpen(false);
       navigate('/', { state: { scrollTo: id } });
     }
   };
@@ -86,7 +116,7 @@ const Navbar = ({ activeSection }) => {
               transition={{ delay: 0.1 * navLinks.length + 0.3, duration: 0.4 }}
             >
               <Button variant="outline" size="sm" asChild>
-                <a href={resumePath} download="Resume-Sai-Surya-Karthik.pdf">
+                <a href={resumePath} download>
                   <Download className="mr-2 h-4 w-4" />
                   Resume
                 </a>
@@ -102,7 +132,7 @@ const Navbar = ({ activeSection }) => {
               asChild
               className="mr-2 text-foreground/80 hover:text-foreground"
             >
-              <a href={resumePath} download="Resume-Sai-Surya-Karthik.pdf" aria-label="Download Resume">
+              <a href={resumePath} download aria-label="Download Resume">
                 <Download size={20} />
               </a>
             </Button>
@@ -123,7 +153,7 @@ const Navbar = ({ activeSection }) => {
         isOpen={isOpen}
         navLinks={navLinks}
         activeSection={activeSection}
-        onLinkClick={scrollToSection}
+        onLinkClick={handleNavClick}
         resumePath={resumePath}
       />
     </motion.header>
@@ -148,16 +178,12 @@ const AnimatedMobileMenu = ({ isOpen, navLinks, activeSection, onLinkClick, resu
     open: {
       y: 0,
       opacity: 1,
-      transition: {
-        y: { stiffness: 1000, velocity: -100 },
-      },
+      transition: { y: { stiffness: 1000, velocity: -100 } },
     },
     closed: {
       y: 50,
       opacity: 0,
-      transition: {
-        y: { stiffness: 1000 },
-      },
+      transition: { y: { stiffness: 1000 } },
     },
   };
 
@@ -185,7 +211,7 @@ const AnimatedMobileMenu = ({ isOpen, navLinks, activeSection, onLinkClick, resu
           ))}
           <motion.a
             href={resumePath}
-            download="Resume-Sai-Surya-Karthik.pdf"
+            download
             variants={itemVariants}
             className="nav-link text-lg w-full text-left py-3 inline-flex items-center"
             whileTap={{ scale: 0.95 }}
