@@ -691,13 +691,40 @@ const ProjectDetail = () => {
     />
   </div>
 
-   <section className="text-center space-y-4">
-              <h1>Click the button below to check the prototype in action</h1>
-              <div className="flex justify-center gap-4">
-                <a href="https://www.figma.com/proto/aFXQczsK2Ya6rTqkfZEEDL/Digital-Wireframe?node-id=146-344&p=f&t=240X13pvbDeLnxrm-0&scaling=scale-down&content-scaling=fixed&page-id=134%3A186&starting-point-node-id=146%3A344" target="_blank" rel="noopener noreferrer" className="px-6 py-2 bg-orange-600 text-white rounded-full shadow hover:bg-orange-700">Hi-fi Prototype</a>
-              </div>
-            </section>
+  
 </section>
+
+<section className="space-y-8 text-center py-16">
+  <h2 className="text-2xl font-extrabold tracking-tight text-gray-900">🎮 Gameplay Experience</h2>
+
+  <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto text-left text-base text-gray-800">
+    <div className="space-y-2">
+      <h3 className="font-semibold text-blue-700">🌊 Animated Game Screens</h3>
+      <p>
+        Ocean-themed visuals come to life with playful bubble animations and expressive fish characters that react to each answer—cheering with happy fish for correct responses and showing sad fish for incorrect ones. These animated interactions help reinforce learning through engaging visual feedback and storytelling.
+      </p>
+    </div>
+    <div className="space-y-2">
+      <h3 className="font-semibold text-blue-700">🗣️ Voice Assistant</h3>
+      <p>
+        A gentle voice assistant was integrated into the game screen to read out each math question, supporting early readers and enhancing accessibility during gameplay.
+      </p>
+    </div>
+    <div className="space-y-2">
+      <h3 className="font-semibold text-blue-700">🎵 Calming Music & Sounds</h3>
+      <p>
+        Background music and ambient sound effects are carefully selected to maintain focus and relaxation, ensuring a calm, enjoyable environment during gameplay.
+      </p>
+    </div>
+    <div className="space-y-2">
+      <h3 className="font-semibold text-blue-700">👆 Tap-Friendly Interface</h3>
+      <p>
+        Designed specifically for small hands, all interactive elements are large, simple, and responsive—perfect for kids using mobile devices.
+      </p>
+    </div>
+  </div>
+</section>
+
 
 <section className="grid md:grid-cols-2 gap-12 items-start">
   {/* Impact Section */}
