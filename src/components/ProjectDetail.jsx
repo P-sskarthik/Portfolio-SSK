@@ -659,6 +659,16 @@ const ProjectDetail = () => {
 <section className="space-y-8">
   <div className="space-y-4 text-base text-muted-foreground">
     <h3 className="text-2xl font-extrabold tracking-tight text-gray-900">Paper wireframes</h3>
+    <p>
+      I began the design process by sketching multiple low-fidelity paper wireframes for the home screen.
+      Since this is the first screen users interact with, I focused on experimenting with layout variations that would
+      best support navigation, engagement, and accessibility for young children.
+    </p>
+    <p>
+      Each version explored different placements of the play button, navigation elements, and visual storytelling cues (like fish and waves),
+      all tailored to make the interaction feel intuitive and fun for early learners.
+      This step helped validate basic information hierarchy before moving into digital wireframes.
+    </p>
     <img
       src="/Paper.jpg"
       width="1500"
@@ -667,6 +677,7 @@ const ProjectDetail = () => {
     />
   </div>
 </section>
+
 
 <section className="space-y-8">
   <div className="space-y-4 text-base text-muted-foreground">
