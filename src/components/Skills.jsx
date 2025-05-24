@@ -61,7 +61,7 @@ const Skills = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">My <span className="gradient-text">Skills</span></h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">My <span className="bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 bg-clip-text text-transparent">Skills</span></h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">
           A comprehensive overview of my technical abilities and expertise in UX/UI design and frontend development.
         </p>

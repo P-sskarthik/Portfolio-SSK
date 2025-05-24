@@ -669,14 +669,17 @@ const ProjectDetail = () => {
       all tailored to make the interaction feel intuitive and fun for early learners.
       This step helped validate basic information hierarchy before moving into digital wireframes.
     </p>
-    <img
-      src="/Paper.jpg"
-      width="1500"
-      alt="PaperSketches"
-      className="detail-image rounded-lg shadow-md"
-    />
+    <div className="flex justify-center">
+      <img
+        src="/Paper.jpg"
+        width="500"
+        alt="PaperSketches"
+        className="detail-image rounded-lg shadow-md"
+      />
+    </div>
   </div>
 </section>
+
 
 
 <section className="space-y-8">
