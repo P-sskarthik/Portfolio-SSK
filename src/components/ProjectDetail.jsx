@@ -715,7 +715,7 @@ const ProjectDetail = () => {
     <div className="space-y-2">
       <h3 className="font-semibold text-blue-700">🌊 Animated Game Screens</h3>
       <p>
-        Ocean-themed visuals come to life with playful bubble animations and expressive fish characters that react to each answer—cheering with happy fish for correct responses and showing sad fish for incorrect ones. These animated interactions help reinforce learning through engaging visual feedback and storytelling.
+        Ocean-themed visuals come to life with playful bubble animations and expressive fish characters that react to each answer—cheering with happy fish for correct responses and showing sad fish for incorrect ones.
       </p>
     </div>
     <div className="space-y-2">
