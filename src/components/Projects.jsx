@@ -43,7 +43,7 @@ const Projects = () => {
       image: '/ZunoTube.png',
       category: 'frontend',
       tags: ['JavaScript', 'React', 'TailwindCSS', 'useEffect', 'useState'],
-      link: 'mmmm',
+      link: 'https://main.d1bee22mnun7bt.amplifyapp.com/',
     },
   ];
 
