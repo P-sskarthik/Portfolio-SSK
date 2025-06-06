@@ -29,21 +29,21 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: 'Netflix-GPT',
-      description: 'Netflix-GPT is a dynamic web application developed using React and Redux that integrates (AI) to deliver personalized movie recommendations.',
-      image: '/Netflixgpt.jpg',
+      title: 'Smartflix',
+      description: 'Smartflix is a dynamic web application built with React and Redux, integrating AI to deliver personalized movie recommendations, inspired by Netflix user interface and experience.',
+      image: '/S.png',
       category: 'frontend',
       tags: ['React', 'Tailwind CSS', 'Redux', 'GPT-APIs', 'TMDB API', 'Framer Motion', 'Responsive Design'],
       link: 'https://main.d3fcn6oik0lorx.amplifyapp.com/',
     },
     {
       id: 4,
-      title: 'Delicious Recipe Finder',
-      description: 'A React-based recipe search app that lets users discover and view delicious recipes with images and YouTube video tutorials, styled beautifully using Tailwind CSS.',
-      image: '/Recipes.jpg',
+      title: 'ZunoTube',
+      description: 'ZunoTube is a YouTube-inspired video streaming app built with React, Redux Toolkit, and Tailwind CSS. It fetches trending and searched videos using the YouTube Data API with dynamic category-based filtering.',
+      image: '/ZunoTube.png',
       category: 'frontend',
       tags: ['JavaScript', 'React', 'TailwindCSS', 'useEffect', 'useState'],
-      link: 'https://recipecardss.netlify.app/',
+      link: 'mmmm',
     },
   ];
 
