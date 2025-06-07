@@ -140,7 +140,7 @@ const ProjectCard = ({ project, index }) => {
                 >
                   <Eye className="mr-1 h-4 w-4" />
                   <span className="relative overflow-hidden">
-                    <span className="underline-animation">UX Case Study</span>
+                    <span className="underline-animation cursor-pointer">UX Case Study</span>
                   </span>
                 </motion.button>
               </Link>
