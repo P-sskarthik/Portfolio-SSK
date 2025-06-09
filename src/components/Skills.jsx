@@ -36,7 +36,7 @@ const Skills = () => {
     {
       title: 'Tools & Software',
       icon: <Figma className="h-6 w-6" />,
-      skills: ['Figma,','VS Code,','Git,','Adobe XD,', 'Sketch,', 'Miro,', 'Adobe Firefly,', 'Wordpress,','Unity,' ],
+      skills: ['Figma,','VS Code,','Git,','Adobe XD,', 'Sketch,', 'Miro,', 'Adobe Firefly,', 'Wordpress,','Unity' ],
       color: 'from-green-500 to-emerald-500'
     }
   ];
