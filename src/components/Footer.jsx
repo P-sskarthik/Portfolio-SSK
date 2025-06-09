@@ -35,13 +35,13 @@ const Footer = () => {
 
           <div>
             <a
-              href="/Resume-Sai-Surya-Karthik.pdf"
+              href="/Sai_Surya_Karthik_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-gray-800 hover:underline"
             >
               <span role="img" aria-label="chat">💬</span>
-              <span className="underline">Resume–Sai-Surya-Karthik.pdf</span>
+              <span className="underline">Sai_Surya_Karthik_Resume.pdf</span>
             </a>
           </div>
         </div>

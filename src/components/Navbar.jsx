@@ -10,7 +10,7 @@ const Navbar = ({ activeSection }) => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const resumePath = '/Resume-Sai-Surya-Karthik.pdf';
+  const resumePath = '/Sai_Surya_Karthik_Resume.pdf';
 
   // Track page scroll to style navbar
   useEffect(() => {
