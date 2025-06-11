@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import Navbar from "./Navbar";
+import Navbar from "../Components/Navbar";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Dribbble } from "lucide-react";
 const ProjectDetail = () => {
