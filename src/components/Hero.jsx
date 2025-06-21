@@ -39,7 +39,7 @@ const Hero = () => {
 >
   Creative{" "}
   <span className="bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 bg-clip-text text-transparent">
-    UX/UI
+    UI/UX
   </span>{" "}
   Developer
 </motion.h1>
