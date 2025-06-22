@@ -62,7 +62,7 @@ const Hero = () => {
     animate={{ opacity: 1, y: 0 }}
     transition={{ delay: 0.8, duration: 0.6 }}
   >
-    I'm a creative UI/UX dev with 3 years of real-world experience crafting seamless, user-centered designs. I focus on building clear and easy-to-use solutions for digital products across finance, e-commerce, and ed-tech.
+    A creative UI/UX developer with 3 years of hands-on experience crafting seamless, user-centered designs. I specialize in building clear and intuitive digital solutions for products in finance, e-commerce, and ed-tech.
   </motion.blockquote>
 
 </div>
