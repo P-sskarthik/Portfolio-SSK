@@ -15,46 +15,58 @@ const Hero = () => {
   };
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center pt-18">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center pt-12">
       {/* Left Side */}
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <motion.span
-          className="z-10 text-4xl font-bold sm:text-lg md:text-xl whitespace-nowrap bg-clip-text"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.5 }}
-        >
-          Hello, I'm Sai Surya Karthik
-        </motion.span>
+        <div className="z-10">
+  <motion.div
+    className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-800 whitespace-nowrap"
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ delay: 0.2, duration: 0.5 }}
+  >
+    Hello{" "}
+    <motion.span
+      className="inline-block"
+      initial={{ rotate: 0 }}
+      animate={{ rotate: [0, 20, -10, 20, -5, 0] }}
+      transition={{ delay: 0.3, duration: 1.2, ease: "easeInOut" }}
+    >
+      👋🏻
+    </motion.span>{" "}
+    there, I'm
+  </motion.div>
 
-        <motion.h1
-  className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 leading-snug"
+ <motion.h1
+  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold pt-4 bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text text-transparent transition duration-300 hover:drop-shadow-[0_0_12px_rgba(99,102,241,0.6)]"
   initial={{ opacity: 0, y: 20 }}
   animate={{ opacity: 1, y: 0 }}
-  transition={{ delay: 0.4, duration: 0.6 }}
+  transition={{ delay: 0.5, duration: 0.6 }}
 >
-  Creative{" "}
-  <span className="bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 bg-clip-text text-transparent">
-    UI/UX
-  </span>{" "}
-  Developer
+  Sai Surya Karthik
 </motion.h1>
 
 
-       
+</div>
 
-        <motion.blockquote
-          className="italic text-gray-600 text-base border-l-4 border-indigo-400 pl-4 max-w-lg"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8, duration: 0.6 }}
-        >
-          "I love three things: Design, Technology, and Adventures. With these in my toolkit, I’m all about creating cool, useful experiences that make a real difference."
-        </motion.blockquote>
+
+        <div className="pt-4 max-w-xl">
+
+   <motion.blockquote
+    className="italic text-gray-600 pt-4 text-base border-l-4 border-indigo-400 pl-4"
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ delay: 0.8, duration: 0.6 }}
+  >
+    I'm a creative UI/UX dev with 3 years of real-world experience crafting seamless, user-centered designs. I focus on building clear and easy-to-use solutions for digital products across finance, e-commerce, and ed-tech.
+  </motion.blockquote>
+
+</div>
+
 
         <motion.div
           className="flex flex-wrap gap-4 mt-6"
@@ -113,7 +125,9 @@ const Hero = () => {
 
       {/* Right Side – Visual */}
       <motion.div
-        className="relative hidden lg:block group"
+        className="w-full aspect-square pt-12 object-cover transition-transform duration-500 hover:scale-105"
+
+
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
@@ -122,7 +136,7 @@ const Hero = () => {
           <img
             alt="Abstract design representing UX/UI development"
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-            src="https://images.unsplash.com/photo-1558655146-d09347e92766"
+            src="/K.JPG"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent"></div>
         </div>
