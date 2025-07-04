@@ -54,18 +54,25 @@ const Hero = () => {
 </div>
 
 
-        <div className="pt-4 max-w-xl">
-
-   <motion.blockquote
-    className="italic text-gray-600 pt-4 text-base border-l-4 border-indigo-400 pl-4"
+        <div className="pt-3 max-w-xl">
+  <motion.blockquote
+    className="italic text-gray-600 pt-3 text-base space-y-4"
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ delay: 0.8, duration: 0.6 }}
   >
-    A creative UI/UX developer with 3 years of hands-on experience crafting seamless, user-centered designs. I specialize in building clear and intuitive digital solutions for products in finance, e-commerce, and ed-tech.
+    <p>
+      I see myself as a full-stack designer because I enjoy blending interaction design, user research, and front-end development.
+    </p>
+    <p>
+      With 3 years of work experience crafting seamless, user-centered designs, I specialize in building clear and intuitive digital solutions for products in finance, e-commerce, and ed-tech.
+    </p>
+    <p>
+      When I’m not working, you’ll find me planning my next trip, humming my favorite melodies, cooking something tasty, or enjoying a well-deserved nap.
+    </p>
   </motion.blockquote>
-
 </div>
+
 
 
         <motion.div
