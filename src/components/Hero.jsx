@@ -41,13 +41,25 @@ const Hero = () => {
     there, I'm
   </motion.div>
 
- <motion.h1
-  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold pt-4 bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text text-transparent transition duration-300 hover:drop-shadow-[0_0_12px_rgba(99,102,241,0.6)]"
+<motion.h1
+  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold pt-4 bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text text-transparent flex flex-wrap"
   initial={{ opacity: 0, y: 20 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ delay: 0.5, duration: 0.6 }}
 >
-  Sai Surya Karthik
+  {"Sai Surya Karthik".split("").map((char, i) => (
+    <motion.span
+      key={i}
+      whileHover={{
+        y: -6,
+        scale: 1.2,
+        transition: { type: "spring", stiffness: 300, damping: 12 }
+      }}
+      className="inline-block"
+    >
+      {char === " " ? "\u00A0" : char}
+    </motion.span>
+  ))}
 </motion.h1>
 
 
