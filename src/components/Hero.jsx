@@ -62,7 +62,7 @@ const Hero = () => {
     transition={{ delay: 0.8, duration: 0.6 }}
   >
     <p>
-      I see myself as a full-stack designer because I enjoy blending interaction design, user research, and front-end development.
+      I see myself as a UI/UX Developer because I enjoy blending interaction design, user research, and front-end development.
     </p>
     <p>
       With 3 years of work experience crafting seamless, user-centered designs, I specialize in building clear and intuitive digital solutions for products in finance, e-commerce, and ed-tech.
