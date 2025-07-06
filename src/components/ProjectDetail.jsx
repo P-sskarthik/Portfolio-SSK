@@ -297,10 +297,11 @@ const ProjectDetail = () => {
 
 
           <div className="grid grid-cols-1 gap-6">
-        
+        <h2 className="text-3xl font-bold text-gray-900">Low-Fidelity Prototype </h2>
             <img src="/Design8.jpg" width="1500" alt="Design 8" className="detail-image" />
-            <h1 className="text-3xl">The user flow of the system is presented in this picture. It starts off with a home page. The app has a navigation menu where users can easily go from looking at the menu, booking a table, and checking their reservation.</h1>
+            <h1 className="text-xl">The user flow of the system is presented in this picture. It starts off with a home page. The app has a navigation menu where users can easily go from looking at the menu, booking a table, and checking their reservation.</h1>
            
+           <h2 className="text-3xl font-bold text-gray-900">High-Fidelity Prototype </h2>
             <img src="/Design9.jpg" width="1500" alt="Design 9" className="detail-image" />
 
             <section className="text-center space-y-4">
