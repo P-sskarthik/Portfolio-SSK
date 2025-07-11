@@ -32,7 +32,7 @@ const ProjectDetail = () => {
           <section className="grid md:grid-cols-2 gap-12">
             <div>
               <h2 className="text-xl font-semibold mb-2">Project Overview</h2>
-              <p>As part of my UX Design course, I created a mobile booking app for a restaurant. The app went through a full design cycle from research to hi-fi prototypes.</p>
+              <p>As part of my Google UX Design course, I created a mobile booking app for a restaurant. The app went through a full design cycle from research to hi-fi prototypes.</p>
             </div>
             <div>
               <h2 className="text-xl font-semibold mb-2">My Role & Responsibilities</h2>
