@@ -146,127 +146,167 @@ const ProjectDetail = () => {
       </p>
     </div>
   </div>
+
+  <section className="text-center px-4 max-w-3xl mx-auto space-y-4">
+  <p className="text-gray-700 text-lg">
+    I observed varying needs between users who face challenges with foreign cuisines and those
+    frustrated by booking limitations. Personas helped us represent these distinct user groups and
+    keep their goals in mind throughout the design process.
+  </p>
 </section>
+
+</section>
+  <h2 className="text-3xl font-bold text-gray-800">Personas</h2>
 <section className="grid md:grid-cols-2 gap-12 items-center">
-  {/* Left Side: Text Content */}
-  <div className="space-y-6">
-    <h2 className="text-3xl font-bold text-gray-800">Persona: <span className="text-black">Mahesh</span></h2>
-
-    <div>
-      <h3 className="text-xl font-semibold text-red-600">Problem statement:</h3>
-      <p className="text-gray-700 mt-2">
-        Mahesh is a foodie who needs image/good visuals on the menu,
-        particularly with unfamiliar cuisine.
-      </p>
-    </div>
-  </div>
-
-  {/* Right Side: Persona Card (as image placeholder for now) */}
-  <div className="w-full">
+ <div className="w-full">
     <img
-      src="/Design6.jpg" // update path as needed
+      src="/Design6.jpg" 
       alt="Persona Mahesh"
-      className="rounded-lg shadow-md w-full max-w-xl mx-auto"
+      className="rounded-lg  pt-6 shadow-md w-full max-w-xl "
     />
   </div>
+  <div className="space-y-6">
+   <div className="w-full">
+  
+    <img
+      src="/Design7.jpg" 
+      alt="Persona Emily"
+      className="rounded-lg  pt-6 shadow-md w-full max-w-xl "
+    />
+  </div>
+  </div>
+</section>
+<section className="text-center px-4 max-w-3xl mx-auto space-y-4">
+  <p className="text-gray-700 text-lg">
+    "After identifying core personas like Mahesh and Emily, I translated their key pain points into user stories. These concise narratives helped guide design decisions by focusing on what users want to accomplish and why."
+  </p>
 </section>
 
-<section className="space-y-10">
-  {/* Title and Description */}
-  <div className="grid md:grid-cols-2 gap-8 items-start">
-    <div className="space-y-4">
-      <h2 className="text-3xl font-bold text-gray-800">User journey map</h2>
-      <p className="text-gray-600 text-lg">
-        Tracing Mahesh’s user journey helps me understand what to incorporate in the prototype.
-      </p>
-    </div>
+<section className="space-y-16">
 
-    {/* Persona Info Card */}
-    <div className="bg-blue-50 rounded-lg p-4 border">
-      <h3 className="font-semibold">Persona Name: Mahesh</h3>
-      <p className="text-sm text-gray-700">
-        Goal: Booking platform with nice visuals of food being offered.
-      </p>
-      <div className="mt-2 text-sm text-gray-600 flex items-center gap-2">
-        <span>🎯</span> <span>Journey goal</span>
+  {/* Mahesh's Journey Map */}
+  <div className="space-y-10">
+    <div className="grid md:grid-cols-2 gap-8 items-start">
+      <div className="space-y-4">
+        <h2 className="text-3xl font-bold text-gray-800">User journey map</h2>
+        <p className="text-gray-600 text-lg">
+          Tracing Mahesh’s user journey helps me understand what to incorporate in the prototype.
+        </p>
+      </div>
+
+      <div className="bg-blue-50 rounded-lg p-4 border">
+        <h3 className="font-semibold">Persona Name: Mahesh</h3>
+        <p className="text-sm text-gray-700">
+          Goal: Booking platform with nice visuals of food being offered.
+        </p>
+        <div className="mt-2 text-sm text-gray-600 flex items-center gap-2">
+          <span>🎯</span> <span>Journey goal</span>
+        </div>
       </div>
     </div>
+
+    <div className="overflow-x-auto">
+      <table className="w-full table-auto border border-gray-300 text-left text-sm">
+        <thead className="bg-gray-100">
+          <tr>
+            <th className="p-3 border"> </th>
+            <th className="p-3 border">Search for the restaurant's website</th>
+            <th className="p-3 border">Browse Content</th>
+            <th className="p-3 border">Book</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td className="p-3 border font-medium gap-2">🗺️ Journey Step</td>
+            <td className="p-3 border">Search up the restaurant’s name on Google</td>
+            <td className="p-3 border">Check the menu and inspect food offerings</td>
+            <td className="p-3 border">Download app, register, and fill in booking details</td>
+          </tr>
+          <tr>
+            <td className="p-3 border font-medium gap-2">👨‍💻 Task List</td>
+            <td className="p-3 border">A. Open browser<br />B. Type in Google.com<br />C. Search restaurant name</td>
+            <td className="p-3 border">A. Browse the website<br />B. Look what is offered<br />C. Check the menu</td>
+            <td className="p-3 border">A. Download the app<br />B. Register<br />C. Fill-in date, time, and seat</td>
+          </tr>
+          <tr>
+            <td className="p-3 border font-medium gap-2">🎭 Feeling</td>
+            <td className="p-3 border">Curious</td>
+            <td className="p-3 border">Surprised with what’s in store</td>
+            <td className="p-3 border">Excitement</td>
+          </tr>
+          <tr className="bg-blue-50">
+            <td className="p-3 border font-medium gap-2">🏗️ Improvement Opportunities</td>
+            <td className="p-3 border">Should be on top of Google search.</td>
+            <td className="p-3 border">• Website should be simple yet engaging.<br />• Pictures should be enticing.</td>
+            <td className="p-3 border">Booking confirmation should contain directions to the restaurant.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 
-  {/* Journey Table */}
-  <div className="overflow-x-auto">
-    <table className="w-full table-auto border border-gray-300 text-left text-sm">
-      <thead className="bg-gray-100">
-        <tr>
-          <th className="p-3 border"> </th>
-          <th className="p-3 border">Search for the restaurant's website</th>
-          <th className="p-3 border">Browse Content</th>
-          <th className="p-3 border">Book</th>
-        </tr>
-      </thead>
-      <tbody>
-        {/* Journey Step Row */}
-        <tr>
-          <td className="p-3  border font-medium  gap-2">
-            <span>🗺️</span> Journey Step
-          </td>
-          <td className="p-3 border">Search up the restaurant’s name on Google</td>
-          <td className="p-3 border">Check the menu and inspect food offerings</td>
-          <td className="p-3 border">Download app, register, and fill in booking details</td>
-        </tr>
+  {/* Emily's Journey Map */}
+  <div className="space-y-10">
+    <div className="grid md:grid-cols-2 gap-8 items-start">
+      <div className="space-y-4">
+        
+        <p className="text-gray-600 text-lg">
+          Mapping Emily’s journey helps design for users who care about ambiance and visual clarity.
+        </p>
+      </div>
 
-        {/* Task List Row */}
-        <tr>
-          <td className="p-3 border font-medium  gap-2">
-            <span>👨‍💻</span> Task List
-          </td>
-          <td className="p-3 border">
-            A. Open browser<br />
-            B. Type in Google.com<br />
-            C. Search restaurant name
-          </td>
-          <td className="p-3 border">
-            A. Browse the website<br />
-            B. Look what is offered<br />
-            C. Check the menu
-          </td>
-          <td className="p-3 border">
-            A. Download the app<br />
-            B. Register<br />
-            C. Fill-in date, time, and seat
-          </td>
-        </tr>
+      <div className="bg-purple-50 rounded-lg p-4 border">
+        <h3 className="font-semibold">Persona Name: Emily</h3>
+        <p className="text-sm text-gray-700">
+          Goal: Discover inspiring places with visually clear menus, especially for Japanese cuisine.
+        </p>
+        <div className="mt-2 text-sm text-gray-600 flex items-center gap-2">
+          <span>🎯</span> <span>Journey goal</span>
+        </div>
+      </div>
+    </div>
 
-        {/* Feeling Row */}
-        <tr>
-          <td className="p-3 border font-medium  gap-2">
-            <span>🎭</span> Feeling
-          </td>
-          <td className="p-3 border">Curious</td>
-          <td className="p-3 border">Surprised with what’s in store</td>
-          <td className="p-3 border">Excitement</td>
-        </tr>
-
-        {/* Improvement Opportunities Row */}
-        <tr className="bg-blue-50">
-          <td className="p-3 border font-medium  gap-2">
-            <span>🏗️</span> Improvement Opportunities
-          </td>
-          <td className="p-3 border">
-            Should be on top of Google search.
-          </td>
-          <td className="p-3 border">
-            • Website should be simple yet engaging.<br />
-            • Pictures should be enticing.
-          </td>
-          <td className="p-3 border">
-            Booking confirmation should contain directions to the restaurant.
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <div className="overflow-x-auto">
+      <table className="w-full table-auto border border-gray-300 text-left text-sm">
+        <thead className="bg-gray-100">
+          <tr>
+            <th className="p-3 border"> </th>
+            <th className="p-3 border">Discover a place</th>
+            <th className="p-3 border">Preview Menu & Vibe</th>
+            <th className="p-3 border">Decide to Visit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td className="p-3 border font-medium gap-2">🗺️ Journey Step</td>
+            <td className="p-3 border">Find new cafés or Japanese restaurants to try</td>
+            <td className="p-3 border">Check photos of ambiance and Japanese dishes</td>
+            <td className="p-3 border">Choose whether to visit or try somewhere else</td>
+          </tr>
+          <tr>
+            <td className="p-3 border font-medium gap-2">👩‍🎨 Task List</td>
+            <td className="p-3 border">A. Browse Instagram<br />B. Ask friends<br />C. Search local spots</td>
+            <td className="p-3 border">A. Look for ambiance photos<br />B. Check if Japanese food is visually appealing<br />C. Read visual menus if available</td>
+            <td className="p-3 border">A. Decide based on visuals<br />B. Look up directions<br />C. Prepare to visit</td>
+          </tr>
+          <tr>
+            <td className="p-3 border font-medium gap-2">🎭 Feeling</td>
+            <td className="p-3 border">Hopeful</td>
+            <td className="p-3 border">Inspired and curious</td>
+            <td className="p-3 border">Satisfied or disappointed</td>
+          </tr>
+          <tr className="bg-purple-50">
+            <td className="p-3 border font-medium gap-2">🏗️ Improvement Opportunities</td>
+            <td className="p-3 border">Local discovery should be more visual and personalized.</td>
+            <td className="p-3 border">• Menus should show actual photos<br />• Ambiance previews help her decide</td>
+            <td className="p-3 border">Allow easy saving or bookmarking for return visits.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </section>
+
 
 <section className="grid md:grid-cols-2 gap-8 items-start">
   {/* Text Content */}
