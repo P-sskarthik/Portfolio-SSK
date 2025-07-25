@@ -88,7 +88,13 @@ const Navbar = ({ activeSection }) => {
             transition={{ delay: 0.2, duration: 0.5 }}
           >
             <span className="text-3xl font-bold bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 bg-clip-text text-transparent">
-              <button onClick={() => navigate('/')}>SSK</button>
+             <button onClick={() => navigate('/')} aria-label="Go to Home">
+  <img
+    src="/Logo.png"
+    alt="SSK Logo"
+    className="h-31 w-auto object-contain"
+  />
+</button>
             </span>
           </motion.div>
 
