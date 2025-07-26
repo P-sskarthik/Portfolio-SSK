@@ -92,7 +92,7 @@ const Navbar = ({ activeSection }) => {
   <img
     src="/Logo.png"
     alt="SSK Logo"
-    className="h-31 w-auto object-contain"
+    className="h-22 w-auto object-contain"
   />
 </button>
             </span>

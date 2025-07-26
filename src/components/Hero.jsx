@@ -42,7 +42,8 @@ const Hero = () => {
   </motion.div>
 
 <motion.h1
-  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold pt-4 bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text text-transparent flex flex-wrap"
+ className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold pt-4 bg-gradient-to-r from-[#0ba3ff] to-[#0072FF] bg-clip-text text-transparent flex flex-wrap"
+
   initial={{ opacity: 0, y: 20 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ delay: 0.5, duration: 0.6 }}
