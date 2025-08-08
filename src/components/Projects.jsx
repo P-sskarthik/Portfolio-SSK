@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, Eye } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Projects = () => {
   const [activeTab, setActiveTab] = useState('all');
@@ -90,30 +89,33 @@ const Projects = () => {
 };
 
 const ProjectCard = ({ project, index }) => {
-  const [showOverlay, setShowOverlay] = useState(false);
+  const navigate = useNavigate();
 
-  const toggleOverlay = () => {
-    if (window.innerWidth < 768) {
-      setShowOverlay(!showOverlay);
+  const handleCardClick = () => {
+    if (project.link) {
+      window.open(project.link, '_blank');
+    } else {
+      navigate(`/project/${project.id}`);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 
   return (
     <motion.div
-      className="project-card group bg-card rounded-xl overflow-hidden shadow-lg border border-primary/5"
+      className="group bg-card rounded-xl overflow-hidden shadow-lg border border-primary/5 transition-transform hover:-translate-y-1 cursor-pointer"
+      onClick={handleCardClick}
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      whileHover={{ y: -5 }}
     >
-      <div className="relative h-100 cursor-pointer" onClick={toggleOverlay}>
+      <div className="relative h-full">
         <img
           alt={project.title}
-          className="w-full h-full object-cover"
+          className="w-full h-100 object-cover"
           src={project.image}
         />
-        <div className={`absolute inset-0 bg-black/70 p-4 text-white flex flex-col justify-end transition-opacity duration-300 ${showOverlay ? 'opacity-100' : 'opacity-0'} md:opacity-0 md:group-hover:opacity-100`}>
+        <div className="absolute inset-0 bg-black/70 p-4 text-white flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
           <p className="text-sm mb-4">{project.description}</p>
 
@@ -127,35 +129,17 @@ const ProjectCard = ({ project, index }) => {
           </div>
 
           <div className="flex gap-3">
-            {(project.id === 1 || project.id === 2) && (
-              <Link
-                to={`/project/${project.id}`}
-                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              >
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.97 }}
-                  transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-                  className="relative px-4 py-2 text-sm font-medium bg-secondary text-primary rounded-full inline-flex items-center group"
-                >
-                  <Eye className="mr-1 h-4 w-4" />
-                  <span className="relative overflow-hidden">
-                    <span className="underline-animation cursor-pointer">UX Case Study</span>
-                  </span>
-                </motion.button>
-              </Link>
+            {!project.link && (
+              <div className="flex items-center gap-1 text-sm text-white/90">
+                <Eye className="h-4 w-4" />
+                UX Case Study
+              </div>
             )}
-
             {project.link && (
-              <a href={project.link} target="_blank" rel="noopener noreferrer">
-                <Button
-                  size="sm"
-                  variant="outline"
-                  className="rounded-full bg-white/10 border-white/20 hover:bg-white/20"
-                >
-                  <ExternalLink className="h-4 w-4" />
-                </Button>
-              </a>
+              <div className="flex items-center gap-1 text-sm text-white/90">
+                <ExternalLink className="h-4 w-4" />
+                Live Preview
+              </div>
             )}
           </div>
         </div>
