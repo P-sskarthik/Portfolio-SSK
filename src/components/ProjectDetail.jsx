@@ -562,96 +562,92 @@ const ProjectDetail = () => {
 
 
 
-          <section className="space-y-8">
-            <div className="space-y-4 text-base text-muted-foreground">
-              <p><strong>FIN-TASTIC DIVISION Game Design</strong></p>
-              <p className="text-sm text-gray-500 italic">UX/UI Designer — Jan 2024 to May 2024</p>
-              <p>The game aims to make math, especially division, more engaging for young learners. As the UX/UI Designer, I focused on creating an intuitive and visually appealing experience for children aged 6–8.</p>
-              <p>I began by crafting wireframes and lo-fi prototypes to establish basic navigation and task flows. After several iterations and usability tests, I translated these into high-fidelity screens in Figma.</p>
-              <p>I also created original character concepts using Adobe Firefly and Sketchbook. These characters served as in-game guides and reward systems. Backgrounds and animated assets were custom-designed to keep the environment playful and educational.</p>
-              <p>Affinity diagrams helped us synthesize feedback from peers and test users. I mapped out a clear user flow diagram to ensure logical and child-friendly progression throughout the game.</p>
-            </div>
-          </section>
-          <section className="space-y-8">
+         <section className="space-y-8">
+  <div className="space-y-4 text-base text-muted-foreground">
+    <p><strong>FIN-TASTIC DIVISION Game Design</strong></p>
+    <p className="text-sm text-gray-500 italic">
+      UX/UI Designer — Jan 2024 to May 2024
+    </p>
+    <p>
+      The game aims to make math—especially division—more engaging for young learners. As the UX/UI Designer, I focused on creating an intuitive and visually appealing experience for children aged 6–8.
+    </p>
+    <p>
+      I began by crafting wireframes and low-fidelity prototypes to establish basic navigation and task flows. After several iterations and usability tests, I translated these into high-fidelity screens in Figma.
+    </p>
+    <p>
+      I also created original character concepts using Adobe Firefly and Sketchbook. These characters served as in-game guides and reward systems. Backgrounds and animated assets were custom-designed to keep the environment playful and educational.
+    </p>
+    <p>
+      Affinity diagrams helped us synthesize feedback from peers and test users. I mapped out a clear user flow diagram to ensure logical and child-friendly progression throughout the game.
+    </p>
+  </div>
+</section>
+
+{/* User Research Section */}
+<section className="space-y-8">
   <div className="space-y-4 text-base text-muted-foreground">
     <h3 className="text-2xl font-extrabold tracking-tight text-gray-900">User Research</h3>
 
     <p>
-      To better understand how to create an engaging game for kids, I started by chatting with my teammates to hear their thoughts and ideas. I also did some online research to explore what makes a game both fun and educational, especially for younger children.
+      To better understand how to create an engaging and educational experience for children, I combined peer collaboration with real-world observations. I began by discussing ideas with my teammates to explore different directions, then moved into direct user research with my target audience.
     </p>
+
     <p>
-      Since I was working on a tight timeline, I used a <strong>qualitative research</strong> approach. This helped me gather quick insights into what kids enjoy and how to design an experience that's simple, interactive, and visually appealing.
+      I conducted informal interviews with my nephew, neighborhood kids, and a few other children aged 6–8. I asked them about the games they enjoyed, what made them want to keep playing, and what frustrated them. I also observed their behavior while interacting with other educational games and mobile apps.
     </p>
+
     <p>
-      These early findings helped shape the design direction of the game, making sure it was tailored for <strong>Android mobile devices</strong> and easy for kids to navigate and enjoy.
+      From these sessions, I noticed that <strong>small animations</strong>, <strong>gentle background music</strong>, and <strong>soft, eye-friendly color palettes</strong> helped children stay engaged for longer periods. Overly bright visuals, rapid transitions, or loud sound effects often caused distraction or disinterest.
+    </p>
+
+    <p>
+      My design goal became clear: create an environment that keeps kids engaged on-screen while learning division in a way that feels fun, calm, and rewarding. I prioritized simple interaction patterns, rewarding animations, and accessible visual design tailored for children.
+    </p>
+
+    <p>
+      Since I was working with a tight timeline, I used a <strong>qualitative research</strong> approach to quickly gather insights that directly informed both the gameplay and UI design. These findings shaped the decision to design specifically for <strong>Android mobile devices</strong> with large, tap-friendly elements.
     </p>
   </div>
 </section>
 
-
-
+{/* Pain Points Section */}
 <section className="space-y-10 text-center">
-  <h2 className="text-2xl font-bold text-gray-900">User research: pain points</h2>
-
+  <h2 className="text-2xl font-bold text-gray-900">User Research: Pain Points</h2>
   <div className="grid md:grid-cols-4 gap-8 text-sm text-gray-800">
-    {/* Pain Point 1 */}
     <div className="space-y-4">
-      <div className="w-12 h-12 rounded-full bg-gray-100 mx-auto flex items-center justify-center text-xl font-bold text-blue-900">
-        1
-      </div>
-      <h3 className="font-semibold text-blue-700">Pain point</h3>
-      <p>
-        Division is a tough concept for kids to grasp, especially without
-        strong visuals or interactive guidance to make it click.
-      </p>
+      <div className="w-12 h-12 rounded-full bg-gray-100 mx-auto flex items-center justify-center text-xl font-bold text-blue-900">1</div>
+      <h3 className="font-semibold text-blue-700">Concept Difficulty</h3>
+      <p>Division is a tough concept for kids to grasp, especially without strong visuals or interactive guidance to make it click.</p>
     </div>
-
-    {/* Pain Point 2 */}
     <div className="space-y-4">
-      <div className="w-12 h-12 rounded-full bg-gray-100 mx-auto flex items-center justify-center text-xl font-bold text-blue-900">
-        2
-      </div>
-      <h3 className="font-semibold text-blue-700">Pain point</h3>
-      <p>
-        Too much on-screen text can overwhelm younger learners who are still
-        developing their reading skills.
-      </p>
+      <div className="w-12 h-12 rounded-full bg-gray-100 mx-auto flex items-center justify-center text-xl font-bold text-blue-900">2</div>
+      <h3 className="font-semibold text-blue-700">Text Overload</h3>
+      <p>Too much on-screen text can overwhelm younger learners who are still developing their reading skills.</p>
     </div>
-
-    {/* Pain Point 3 */}
     <div className="space-y-4">
-      <div className="w-12 h-12 rounded-full bg-gray-100 mx-auto flex items-center justify-center text-xl font-bold text-blue-900">
-        3
-      </div>
-      <h3 className="font-semibold text-blue-700">Pain point</h3>
-      <p>
-        Kids may lose interest quickly without rewards, animation, or progress
-        tracking to keep them motivated.
-      </p>
+      <div className="w-12 h-12 rounded-full bg-gray-100 mx-auto flex items-center justify-center text-xl font-bold text-blue-900">3</div>
+      <h3 className="font-semibold text-blue-700">Low Engagement</h3>
+      <p>Kids may lose interest quickly without rewards, animation, or progress tracking to keep them motivated.</p>
     </div>
-
-    {/* Pain Point 4 */}
     <div className="space-y-4">
-      <div className="w-12 h-12 rounded-full bg-gray-100 mx-auto flex items-center justify-center text-xl font-bold text-blue-900">
-        4
-      </div>
-      <h3 className="font-semibold text-blue-700">Pain point</h3>
-      <p>
-        Complex or small interface elements can be hard for kids to tap and
-        navigate on mobile devices.
-      </p>
+      <div className="w-12 h-12 rounded-full bg-gray-100 mx-auto flex items-center justify-center text-xl font-bold text-blue-900">4</div>
+      <h3 className="font-semibold text-blue-700">Interface Complexity</h3>
+      <p>Complex or small interface elements can be hard for kids to tap and navigate on mobile devices.</p>
     </div>
   </div>
 </section>
 
+{/* Affinity Diagram & Iterations Section */}
 <section className="space-y-6">
   <h2 className="text-2xl font-bold text-gray-900">Affinity Diagram & Iterations</h2>
   <p className="text-gray-700">
-    After conducting user interviews and gathering feedback, I used an affinity diagram to group key insights and identify recurring themes. Based on those insights, I explored possible design solutions like voice assistance, slow transitions, and gentle animations to enhance usability for younger kids.
+    After conducting interviews and observations, I organized the insights into an affinity diagram.
   </p>
+  <p><strong>Why:</strong> To group related findings and identify the most impactful design priorities.</p>
+  <p><strong>What I learned:</strong> Clear visual cues, audio support for early readers, and a rewarding feedback system were recurring needs.</p>
+  <p><strong>What I changed:</strong> Implemented a voice assistant, gentle animations, slower transitions, and an ocean-themed palette to address engagement and accessibility.</p>
 
   <div className="grid md:grid-cols-2 gap-6">
-    {/* Affinity Diagram */}
     <div className="space-y-2">
       <h3 className="text-lg font-semibold text-gray-800">Affinity Diagram</h3>
       <img
@@ -660,12 +656,10 @@ const ProjectDetail = () => {
         className="rounded-lg shadow-md w-full"
       />
     </div>
-
-    {/* Solution Iteration Image */}
     <div className="space-y-2">
       <h3 className="text-lg font-semibold text-gray-800">Design Iterations</h3>
       <img
-        src="/Solutions.jpg" // Replace with your actual image path
+        src="/Solutions.jpg"
         alt="Solution Iteration Highlights"
         className="rounded-lg shadow-md w-full"
       />
@@ -673,19 +667,14 @@ const ProjectDetail = () => {
   </div>
 </section>
 
-
-
+{/* Starting the Design Section */}
 <section className=" text-black py-12 px-2">
   <div className="max-w-2xl mx-auto grid md:grid-cols-2 gap-8 items-center">
-    
-    {/* Left side title */}
     <div className="text-center md:text-left">
       <h2 className="text-2xl font-extrabold leading-tight">
         Starting<br />the design
       </h2>
     </div>
-
-    {/* Divider + List */}
     <div className="flex md:border-l border-black pl-10">
       <ul className="space-y-4 text-lg font-medium">
         <li>• Paper wireframes</li>
@@ -693,23 +682,19 @@ const ProjectDetail = () => {
         <li>• High-fidelity prototype</li>
       </ul>
     </div>
-
   </div>
 </section>
 
+{/* Paper Wireframes */}
 <section className="space-y-8">
   <div className="space-y-4 text-base text-muted-foreground">
     <h3 className="text-2xl font-extrabold tracking-tight text-gray-900">Paper wireframes</h3>
     <p>
       I began the design process by sketching multiple low-fidelity paper wireframes for the home screen.
-      Since this is the first screen users interact with, I focused on experimenting with layout variations that would
-      best support navigation, engagement, and accessibility for young children.
     </p>
-    <p>
-      Each version explored different placements of the play button, navigation elements, and visual storytelling cues (like fish and waves),
-      all tailored to make the interaction feel intuitive and fun for early learners.
-      This step helped validate basic information hierarchy before moving into digital wireframes.
-    </p>
+    <p><strong>Why:</strong> Quickly explore multiple layout options without committing to detailed visuals.</p>
+    <p><strong>What I learned:</strong> Kids preferred simpler layouts with fewer buttons and clear icons.</p>
+    <p><strong>What I changed:</strong> Removed extra links, improved menu placement, and increased tap sizes.</p>
     <div className="flex justify-center">
       <img
         src="/Paper.jpg"
@@ -721,11 +706,16 @@ const ProjectDetail = () => {
   </div>
 </section>
 
-
-
+{/* Low Fidelity Prototype */}
 <section className="space-y-8">
   <div className="space-y-4 text-base text-muted-foreground">
     <h3 className="text-2xl font-extrabold tracking-tight text-gray-900">Low-fidelity prototype</h3>
+    <p>
+      I turned the paper sketches into a clickable low-fidelity prototype in Figma.
+    </p>
+    <p><strong>Why:</strong> Validate navigation flow and hierarchy with early testing.</p>
+    <p><strong>What I learned:</strong> Tap targets needed to be even larger; kids wanted visual feedback.</p>
+    <p><strong>What I changed:</strong> Increased tap areas, added placeholder animations, simplified flow.</p>
     <img
       src="/Low.jpg"
       width="1500"
@@ -735,9 +725,16 @@ const ProjectDetail = () => {
   </div>
 </section>
 
+{/* High Fidelity Prototype */}
 <section className="space-y-8">
   <div className="space-y-4 text-base text-muted-foreground">
     <h3 className="text-2xl font-extrabold tracking-tight text-gray-900">High-fidelity prototype</h3>
+    <p>
+      I refined the low-fidelity flow into high-fidelity screens in Figma with final visuals, characters, and animations.
+    </p>
+    <p><strong>Why:</strong> Deliver a polished, playful, and calm final game environment.</p>
+    <p><strong>What I learned:</strong> Soft gradients, gentle animations, and character reactions improved focus.</p>
+    <p><strong>What I changed:</strong> Adjusted animation speed, improved contrast, refined character expressions.</p>
     <img
       src="/High.jpg"
       width="1500"
@@ -745,78 +742,56 @@ const ProjectDetail = () => {
       className="detail-image rounded-lg shadow-md"
     />
   </div>
-
-  
 </section>
 
+{/* Gameplay Experience */}
 <section className="space-y-8 text-center py-16">
   <h2 className="text-2xl font-extrabold tracking-tight text-gray-900">🎮 Gameplay Experience</h2>
-
   <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto text-left text-base text-gray-800">
     <div className="space-y-2">
       <h3 className="font-semibold text-blue-700">🌊 Animated Game Screens</h3>
-      <p>
-        Ocean-themed visuals come to life with playful bubble animations and expressive fish characters that react to each answer—cheering with happy fish for correct responses and showing sad fish for incorrect ones.
-      </p>
+      <p>Ocean-themed visuals with playful animations and character reactions.</p>
     </div>
     <div className="space-y-2">
       <h3 className="font-semibold text-blue-700">🗣️ Voice Assistant</h3>
-      <p>
-        A gentle voice assistant was integrated into the game screen to read out each math question, supporting early readers and enhancing accessibility during gameplay.
-      </p>
+      <p>Reads questions aloud, helping early readers.</p>
     </div>
     <div className="space-y-2">
       <h3 className="font-semibold text-blue-700">🎵 Calming Music & Sounds</h3>
-      <p>
-        Background music and ambient sound effects are carefully selected to maintain focus and relaxation, ensuring a calm, enjoyable environment during gameplay.
-      </p>
+      <p>Background music maintains focus and relaxation.</p>
     </div>
     <div className="space-y-2">
       <h3 className="font-semibold text-blue-700">👆 Tap-Friendly Interface</h3>
-      <p>
-        Designed specifically for small hands, all interactive elements are large, simple, and responsive—perfect for kids using mobile devices.
-      </p>
+      <p>Large, simple, responsive buttons for small hands.</p>
     </div>
   </div>
 </section>
 
-
+{/* Impact & Learnings */}
 <section className="grid md:grid-cols-2 gap-12 items-start">
-  {/* Impact Section */}
   <div className="space-y-4">
     <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center">
       <span className="text-gray-900 text-2xl">📋</span>
     </div>
     <h2 className="text-2xl font-bold text-gray-900">Impact:</h2>
     <p>
-      Many children find it difficult to connect with traditional ways of learning math,
-      especially when it comes to abstract concepts like division. To help solve this
-      problem, I designed an interactive game that turns math into a fun, visual experience.
-      One of the biggest challenges was designing for young learners aged 6 to 8, who are
-      just starting to explore educational technology. It was important to keep the
-      interface simple, intuitive, and engaging while ensuring the content stayed educational
-      and effective.
+      This game turned a challenging math concept into an engaging, visual, and interactive learning experience.
     </p>
   </div>
-
-  {/* What I Learned Section */}
   <div className="space-y-4">
     <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center">
       <span className="text-gray-900 text-2xl">📖</span>
     </div>
     <h2 className="text-2xl font-bold text-gray-900">What I learned:</h2>
-    <p>
-      Working as a UX/UI designer on an educational game for kids taught me a lot about
-      designing for young users. Some of the key takeaways include:
-    </p>
     <ul className="list-disc list-inside space-y-1">
       <li>Designing with empathy for early learners</li>
-      <li>Keeping interfaces playful, clear, and intuitive</li>
       <li>Balancing fun with educational value</li>
-      <li>Gathering and applying feedback from both peers and child-friendly testing</li>
+      <li>Using visual and audio cues to sustain engagement</li>
+      <li>Applying feedback from both peers and child-friendly testing</li>
     </ul>
   </div>
 </section>
+
   
         </div>
         <section className="bg-sky-200 text-gray-900 py-16 px-6">
