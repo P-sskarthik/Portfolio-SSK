@@ -562,7 +562,7 @@ const ProjectDetail = () => {
 
 
 
-         <section className="space-y-8">
+          <section className="space-y-8">
   <div className="space-y-4 text-base text-muted-foreground">
     <p><strong>FIN-TASTIC DIVISION Game Design</strong></p>
     <p className="text-sm text-gray-500 italic">
@@ -689,12 +689,16 @@ const ProjectDetail = () => {
 <section className="space-y-8">
   <div className="space-y-4 text-base text-muted-foreground">
     <h3 className="text-2xl font-extrabold tracking-tight text-gray-900">Paper wireframes</h3>
-    <p>
+   <p>
       I began the design process by sketching multiple low-fidelity paper wireframes for the home screen.
+      Since this is the first screen users interact with, I focused on experimenting with layout variations that would
+      best support navigation, engagement, and accessibility for young children.
     </p>
-    <p><strong>Why:</strong> Quickly explore multiple layout options without committing to detailed visuals.</p>
-    <p><strong>What I learned:</strong> Kids preferred simpler layouts with fewer buttons and clear icons.</p>
-    <p><strong>What I changed:</strong> Removed extra links, improved menu placement, and increased tap sizes.</p>
+    <p>
+      Each version explored different placements of the play button, navigation elements, and visual storytelling cues (like fish and waves),
+      all tailored to make the interaction feel intuitive and fun for early learners.
+      This step helped validate basic information hierarchy before moving into digital wireframes.
+    </p>
     <div className="flex justify-center">
       <img
         src="/Paper.jpg"
@@ -750,19 +754,19 @@ const ProjectDetail = () => {
   <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto text-left text-base text-gray-800">
     <div className="space-y-2">
       <h3 className="font-semibold text-blue-700">🌊 Animated Game Screens</h3>
-      <p>Ocean-themed visuals with playful animations and character reactions.</p>
+      <p> Ocean-themed visuals come to life with playful bubble animations and expressive fish characters that react to each answer—cheering with happy fish for correct responses and showing sad fish for incorrect ones.</p>
     </div>
     <div className="space-y-2">
       <h3 className="font-semibold text-blue-700">🗣️ Voice Assistant</h3>
-      <p>Reads questions aloud, helping early readers.</p>
+      <p> A gentle voice assistant was integrated into the game screen to read out each math question, supporting early readers and enhancing accessibility during gameplay.</p>
     </div>
     <div className="space-y-2">
       <h3 className="font-semibold text-blue-700">🎵 Calming Music & Sounds</h3>
-      <p>Background music maintains focus and relaxation.</p>
+      <p>Background music and ambient sound effects are carefully selected to maintain focus and relaxation, ensuring a calm, enjoyable environment during gameplay.</p>
     </div>
     <div className="space-y-2">
       <h3 className="font-semibold text-blue-700">👆 Tap-Friendly Interface</h3>
-      <p>Large, simple, responsive buttons for small hands.</p>
+      <p>Designed specifically for small hands, all interactive elements are large, simple, and responsive—perfect for kids using mobile devices.</p>
     </div>
   </div>
 </section>
@@ -775,7 +779,13 @@ const ProjectDetail = () => {
     </div>
     <h2 className="text-2xl font-bold text-gray-900">Impact:</h2>
     <p>
-      This game turned a challenging math concept into an engaging, visual, and interactive learning experience.
+      Many children find it difficult to connect with traditional ways of learning math,
+      especially when it comes to abstract concepts like division. To help solve this
+      problem, I designed an interactive game that turns math into a fun, visual experience.
+      One of the biggest challenges was designing for young learners aged 6 to 8, who are
+      just starting to explore educational technology. It was important to keep the
+      interface simple, intuitive, and engaging while ensuring the content stayed educational
+      and effective.
     </p>
   </div>
   <div className="space-y-4">
