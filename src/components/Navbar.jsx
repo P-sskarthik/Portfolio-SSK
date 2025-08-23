@@ -68,7 +68,7 @@ const Navbar = ({ activeSection }) => {
   const navLinks = [
     { id: 'home', label: 'Home' },
     { id: 'projects', label: 'Projects' },
-    { id: 'skills', label: 'Skills' },
+    // { id: 'skills', label: 'Skills' },
   ];
 
   return (

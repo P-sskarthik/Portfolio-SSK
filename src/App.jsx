@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Navbar from '@/components/Navbar.jsx';
 import Hero from '@/components/Hero.jsx';
 import Projects from '@/components/Projects.jsx';
-import Skills from '@/components/Skills.jsx';
+// import Skills from '@/components/Skills.jsx';
 import Contact from '@/components/Contact.jsx';
 import Footer from '@/components/Footer.jsx';
 
@@ -14,7 +14,7 @@ const App = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'projects', 'skills'];
+      const sections = ['home', 'projects'];
 
       for (const section of sections) {
         const element = document.getElementById(section);
@@ -62,9 +62,9 @@ const App = () => {
               <Projects />
             </section>
 
-            <section id="skills" className="py-20">
+            {/* <section id="skills" className="py-20">
               <Skills />
-            </section>
+            </section> */}
 
             {/* <section id="contact" className="py-20">
               <Contact />

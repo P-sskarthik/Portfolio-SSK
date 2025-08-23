@@ -112,7 +112,7 @@ const ProjectCard = ({ project, index }) => {
       <div className="relative h-full">
         <img
           alt={project.title}
-          className="w-full h-100 object-cover"
+          className="w-full h-80 object-cover"
           src={project.image}
         />
         <div className="absolute inset-0 bg-black/70 p-4 text-white flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">
