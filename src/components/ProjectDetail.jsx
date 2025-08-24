@@ -525,63 +525,75 @@ const ProjectDetail = () => {
   if (id === '1') {
     return (
       <Container>
-        <div className="max-w-7xl mx-auto px-2 py-24 space-y-16 pt-40">
-          <section>
-            <h1 className="text-4xl font-bold mb-2">FIN-TASTIC DIVISION – Educational Math Game</h1>
-            <p className="text-muted-foreground">UX/UI Design | Game Designer</p>
-          </section>
+       <div className="w-full pt-20">
+  <section className="w-full">
+    <img 
+      src="/Frame.png" 
+      alt="Fin-Tastic Division Project" 
+      className="w-full h-auto object-cover"
+    />
+  </section>
+</div>
 
+<div className="max-w-7xl mx-auto px-2  space-y-16 pt-20">
           <section className="grid md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-xl font-semibold mb-2">Project Overview</h2>
+              <h2 className="text-xl font-extrabold mb-2">Project Overview</h2>
               <p>“Fin-Tastic Divisions is a captivating and educational game developed by a dynamic 12-member team, tailored specifically for first and second graders. Set in a vibrant, ocean-themed world, the game transforms the abstract concept of division into a fun, interactive, and visual experience designed to engage early learners. I contributed as the UX/UI Designer, focusing on creating intuitive interfaces and playful user flows that support young children's learning and cognitive abilities. The game was exclusively designed for Android device models.”</p>
             </div>
             <div>
-              <h2 className="text-xl font-semibold mb-2">My Role & Responsibilities</h2>
-              <p>UX/UI Designer — responsible for designing game wireframes, low & high fidelity prototypes, user flows, and UI assets. Also contributed to character design, backgrounds, and basic animations using tools like Unity, Adobe Firefly and Sketchbook.</p>
+              <h2 className="text-xl font-extrabold mb-2">My Role & Responsibilities</h2>
+              <p>UX/UI Designer — I led the full design process from research and wireframes to high-fidelity prototypes and user flows. I created tap-friendly interfaces, interactive assets, and engaging visuals tailored for children aged 6–8. I also contributed character designs, backgrounds, and basic animations using Unity, Adobe Firefly, and Sketchbook.</p>
             </div>
           </section>
 
-         <section className="px-6 py-12 overflow-x-auto">
+
+          <section className="mt-12">
+  <h2 className="text-xl font-extrabold mb-2">Problem</h2>
+  
+    <p>Young learners in grades 1–2 often struggle to grasp division because it is an abstract concept that requires strong visualization skills. Traditional classroom methods and worksheets are text-heavy, leaving many children disengaged and unmotivated to practice.</p>
+    <br></br>
+
+<p>Existing math apps intended for children were often cluttered, unintuitive, and not designed with tap-friendly interfaces that suit smaller hands and developing motor skills. Many apps relied heavily on text, without considering accessibility features such as voice assistance.
+
+, Another challenge was the lack of attractive animations and audio feedback to keep learners engaged. Without calming background sounds or rewarding cues for correct answers, children quickly lost interest and abandoned the activity.</p>
+
+  
+</section>
+
+
+<section className="mt-12">
+  <h2 className="text-xl font-extrabold mb-2">Solution</h2>
+  <p>
+  To design Fin-Tastic Division as a colorful, ocean-themed game app that transforms division into something children genuinely enjoy practicing. Instead of worksheets or text-heavy lessons, the game turns problems into quick, tap-friendly challenges guided by playful fish characters and treasure-like rewards that spark excitement.
+  </p>
+  <br></br>
+  <p>
+    The game uses vibrant animations and clear visual feedback so children instantly know when they’re on the right track.
+A built-in voice assistant reads each question aloud and guides them through correct and incorrect answers.
+Cheerful sound effects and calming background music make learning feel like play, not study.
+Large, tap-friendly buttons ensure smooth interaction for small hands.
+Together, these elements keep kids engaged, smiling, and eager to practice division again and again.
+  </p>
+</section>
+
+  <section className="w-full px-6 py-12">
   <div className="flex justify-center">
-    <div className="flex space-x-4 w-max">
-      {[
-        "/Screen1.png",
-        "/Screen5.png"
-      ].map((src, index) => (
-        <img
-          key={index}
-          src={src}
-          alt={`Screen ${index + 1}`}
-          className="h-[500px] w-auto rounded-xl transition-transform hover:scale-105"
-        />
-      ))}
-    </div>
+    <img 
+      src="/Frame 5.png" 
+      alt="Fin-Tastic Division Project" 
+      className="w-full h-auto object-cover rounded-xl"
+    />
   </div>
 </section>
 
 
 
-          <section className="space-y-8">
-  <div className="space-y-4 text-base text-muted-foreground">
-    <p><strong>FIN-TASTIC DIVISION Game Design</strong></p>
-    <p className="text-sm text-gray-500 italic">
-      UX/UI Designer — Jan 2024 to May 2024
-    </p>
-    <p>
-      The game aims to make math—especially division—more engaging for young learners. As the UX/UI Designer, I focused on creating an intuitive and visually appealing experience for children aged 6–8.
-    </p>
-    <p>
-      I began by crafting wireframes and low-fidelity prototypes to establish basic navigation and task flows. After several iterations and usability tests, I translated these into high-fidelity screens in Figma.
-    </p>
-    <p>
-      I also created original character concepts using Adobe Firefly and Sketchbook. These characters served as in-game guides and reward systems. Backgrounds and animated assets were custom-designed to keep the environment playful and educational.
-    </p>
-    <p>
-      Affinity diagrams helped us synthesize feedback from peers and test users. I mapped out a clear user flow diagram to ensure logical and child-friendly progression throughout the game.
-    </p>
-  </div>
-</section>
+
+
+
+
+    
 
 {/* User Research Section */}
 <section className="space-y-8">
@@ -616,56 +628,127 @@ const ProjectDetail = () => {
   <div className="grid md:grid-cols-4 gap-8 text-sm text-gray-800">
     <div className="space-y-4">
       <div className="w-12 h-12 rounded-full bg-gray-100 mx-auto flex items-center justify-center text-xl font-bold text-blue-900">1</div>
-      <h3 className="font-semibold text-blue-700">Concept Difficulty</h3>
+      <h3 className="font-semibold text-red-700">Concept Difficulty</h3>
       <p>Division is a tough concept for kids to grasp, especially without strong visuals or interactive guidance to make it click.</p>
     </div>
     <div className="space-y-4">
       <div className="w-12 h-12 rounded-full bg-gray-100 mx-auto flex items-center justify-center text-xl font-bold text-blue-900">2</div>
-      <h3 className="font-semibold text-blue-700">Text Overload</h3>
+      <h3 className="font-semibold text-red-700">Text Overload</h3>
       <p>Too much on-screen text can overwhelm younger learners who are still developing their reading skills.</p>
     </div>
     <div className="space-y-4">
       <div className="w-12 h-12 rounded-full bg-gray-100 mx-auto flex items-center justify-center text-xl font-bold text-blue-900">3</div>
-      <h3 className="font-semibold text-blue-700">Low Engagement</h3>
+      <h3 className="font-semibold text-red-700">Low Engagement</h3>
       <p>Kids may lose interest quickly without rewards, animation, or progress tracking to keep them motivated.</p>
     </div>
     <div className="space-y-4">
       <div className="w-12 h-12 rounded-full bg-gray-100 mx-auto flex items-center justify-center text-xl font-bold text-blue-900">4</div>
-      <h3 className="font-semibold text-blue-700">Interface Complexity</h3>
+      <h3 className="font-semibold text-red-700">Interface Complexity</h3>
       <p>Complex or small interface elements can be hard for kids to tap and navigate on mobile devices.</p>
     </div>
   </div>
 </section>
-
-{/* Affinity Diagram & Iterations Section */}
-<section className="space-y-6">
-  <h2 className="text-2xl font-bold text-gray-900">Affinity Diagram & Iterations</h2>
-  <p className="text-gray-700">
-    After conducting interviews and observations, I organized the insights into an affinity diagram.
-  </p>
-  <p><strong>Why:</strong> To group related findings and identify the most impactful design priorities.</p>
-  <p><strong>What I learned:</strong> Clear visual cues, audio support for early readers, and a rewarding feedback system were recurring needs.</p>
-  <p><strong>What I changed:</strong> Implemented a voice assistant, gentle animations, slower transitions, and an ocean-themed palette to address engagement and accessibility.</p>
-
-  <div className="grid md:grid-cols-2 gap-6">
-    <div className="space-y-2">
-      <h3 className="text-lg font-semibold text-gray-800">Affinity Diagram</h3>
-      <img
-        src="/Affinity.jpg"
-        alt="Affinity Diagram Example"
-        className="rounded-lg shadow-md w-full"
-      />
-    </div>
-    <div className="space-y-2">
-      <h3 className="text-lg font-semibold text-gray-800">Design Iterations</h3>
-      <img
-        src="/Solutions.jpg"
-        alt="Solution Iteration Highlights"
-        className="rounded-lg shadow-md w-full"
-      />
+{/* Affinity Diagram & Iterations */}
+<section id="affinity-iterations" className="space-y-10">
+  {/* Header & Rationale */}
+  <div className="space-y-3">
+    <h2 className="text-2xl font-extrabold tracking-tight text-gray-900">
+      Affinity Diagram & Iterations
+    </h2>
+    <p className="text-gray-700">
+      After interviews and observations, I clustered notes into an affinity diagram to surface patterns
+      around engagement, readability, feedback, and input. This synthesis guided fast, targeted changes.
+    </p>
+    <div className="grid gap-3 sm:grid-cols-3">
+      <p className="text-gray-800"><span className="font-semibold">Why:</span> Group related findings and identify the most impactful design priorities.</p>
+      <p className="text-gray-800"><span className="font-semibold">What I learned:</span> Clear visual cues, audio support for early readers, and rewarding feedback are essential.</p>
+      <p className="text-gray-800"><span className="font-semibold">What I changed:</span> Voice assistant, gentle animations, slower transitions, ocean palette for calm focus.</p>
     </div>
   </div>
+
+  {/* Theme chips */}
+  <ul className="flex flex-wrap gap-2">
+    {[
+      "Minimal Text",
+      "Voice Assistance",
+      "Tap-Friendly Targets",
+      "Positive Feedback",
+      "Calming Audio",
+      "High Contrast",
+      "One Action / Screen",
+      "Smooth Transitions"
+    ].map((t) => (
+      <li
+        key={t}
+        className="inline-flex items-center rounded-full border border-gray-200 bg-white px-3 py-1 text-sm text-gray-800"
+      >
+        {t}
+      </li>
+    ))}
+  </ul>
+
+  {/* Single combined infographic (Problems → Solutions) */}
+  <figure className="space-y-2">
+    <h3 className="text-lg font-semibold text-gray-900">Problems → Solutions (Infographic)</h3>
+    <div className="flex justify-center overflow-hidden rounded-xl">
+      <img
+        src="/Affinity.jpg"  /* <- save your generated image here */
+        alt="Two-column infographic mapping problems to solutions based on affinity themes and iterations"
+        className="w-100 h-auto object-cover t"
+        loading="lazy"
+      />
+    </div>
+    <figcaption className="text-sm text-center text-gray-600">
+      Synthesized problems and the corresponding design iterations that addressed them.
+    </figcaption>
+  </figure>
+
 </section>
+
+
+{/* Personas – Fin-Tastic Division */}
+<section id="personas" className="space-y-10">
+  {/* Intro */}
+  <div className="space-y-4">
+    <h2 className="text-2xl font-extrabold tracking-tight text-gray-900">Personas</h2>
+    <p className="text-gray-700">
+      In preparation for wireframing, I went where our learners and caretakers are most active—parent and teacher forums,
+      kids’ learning communities, app-store reviews, and early play sessions with children aged 6–8. By engaging directly,
+      I built an empathetic picture of their hopes, challenges, and daily usage patterns.
+    </p>
+    <p className="text-gray-700">
+      This research informed two primary personas for <strong>Fin-Tastic Division</strong>, which then guided task flows and user journeys.
+    </p>
+  </div>
+
+  {/* Persona cards */}
+  <div className="grid gap-2 md:grid-cols-2">
+    {/* Phoebe */}
+   
+  <div className="relative w-full h-[420px]">
+    <img
+      src="/Phoebe.png"
+      alt="Persona: Phoebe, 2nd grade learner"
+      className="absolute inset-0 w-full h-full object-contain"
+    />
+  </div>
+
+   <div className="relative w-full h-[420px]">
+    <img
+      src="/Ajay.png"
+      alt="Persona: Phoebe, 2nd grade learner"
+      className="absolute inset-0 w-full h-full object-contain"
+    />
+  </div>
+  </div>
+
+  {/* Closing sentence for case-study narrative */}
+  <p className="text-gray-700">
+    These personas shaped our task flows (Question → Action → Feedback → Reward) and informed wireframes that prioritize
+    <strong> minimal text, voice support, and tap-first interaction</strong> for early learners.
+  </p>
+</section>
+
 
 {/* Starting the Design Section */}
 <section className=" text-black py-12 px-2">
