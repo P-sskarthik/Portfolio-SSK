@@ -563,9 +563,9 @@ const ProjectDetail = () => {
 
 
 <section className="mt-12">
-  <h2 className="text-xl font-extrabold mb-2">Solution</h2>
+  <h2 className="text-xl font-extrabold mb-2">Goal</h2>
   <p>
-  To design Fin-Tastic Division as a colorful, ocean-themed game app that transforms division into something children genuinely enjoy practicing. Instead of worksheets or text-heavy lessons, the game turns problems into quick, tap-friendly challenges guided by playful fish characters and treasure-like rewards that spark excitement.
+  To design a colorful, ocean-themed game app that transforms division into something children genuinely enjoy practicing. Instead of worksheets or text-heavy lessons, the game turns problems into quick, tap-friendly challenges guided by playful fish characters and treasure-like rewards that spark excitement.
   </p>
   <br></br>
   <p>
