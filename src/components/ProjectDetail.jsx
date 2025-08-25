@@ -344,12 +344,7 @@ const ProjectDetail = () => {
            <h2 className="text-3xl font-bold text-gray-900">High-Fidelity Prototype </h2>
             <img src="/Design9.jpg" width="1500" alt="Design 9" className="detail-image" />
 
-            <section className="text-center space-y-4">
-              <h1>Click the button below to check the prototype in action</h1>
-              <div className="flex justify-center gap-4">
-                <a href="https://www.figma.com/proto/aFXQczsK2Ya6rTqkfZEEDL/Digital-Wireframe?node-id=341-43" target="_blank" rel="noopener noreferrer" className="px-6 py-2 bg-orange-600 text-white rounded-full shadow hover:bg-orange-700">Hi-fi Prototype</a>
-              </div>
-            </section>
+            
 
             <section className="text-center space-y-10">
   <h2 className="text-3xl font-semibold text-gray-800">Usability study: findings</h2>
