@@ -734,23 +734,7 @@ Together, these elements keep kids engaged, smiling, and eager to practice divis
 </section>
 
 
-{/* Starting the Design Section */}
-<section className=" text-black py-12 px-2">
-  <div className="max-w-2xl mx-auto grid md:grid-cols-2 gap-8 items-center">
-    <div className="text-center md:text-left">
-      <h2 className="text-2xl font-extrabold leading-tight">
-        Starting<br />the design
-      </h2>
-    </div>
-    <div className="flex md:border-l border-black pl-10">
-      <ul className="space-y-4 text-lg font-medium">
-        <li>• Paper wireframes</li>
-        <li>• Low-fidelity prototype</li>
-        <li>• High-fidelity prototype</li>
-      </ul>
-    </div>
-  </div>
-</section>
+
 
 {/* Paper Wireframes */}
 <section className="space-y-8">
@@ -780,18 +764,17 @@ Together, these elements keep kids engaged, smiling, and eager to practice divis
 {/* Low Fidelity Prototype */}
 <section className="space-y-8">
   <div className="space-y-4 text-base text-muted-foreground">
-    <h3 className="text-2xl font-extrabold tracking-tight text-gray-900">Low-fidelity prototype</h3>
-    <p>
-      I turned the paper sketches into a clickable low-fidelity prototype in Figma.
-    </p>
-    <p><strong>Why:</strong> Validate navigation flow and hierarchy with early testing.</p>
-    <p><strong>What I learned:</strong> Tap targets needed to be even larger; kids wanted visual feedback.</p>
-    <p><strong>What I changed:</strong> Increased tap areas, added placeholder animations, simplified flow.</p>
+    <h3 className="text-2xl font-extrabold tracking-tight text-gray-900">Wireframing + Lo-Fi Prototyping</h3>
+  
+    <p>In designing Fin-Tastic Division, I focused on a core learning loop where kids practice division through voice-read prompts, big tap targets, and instant, encouraging feedback. The experience adds light rewards (stars/treasure, avatar unlocks), simple progress tracking, and profiles so each child can play at their own pace. To keep everything familiar and easy, we used well-known mobile patterns—Home → Play → Pause/Settings → Scoreboard—with one clear action per screen and minimal text.</p>
+   <br></br>
+   <p>Below, you’ll see a brief of the wireframes with interaction arrows showing how children progress through a session.</p>
+   <br></br>
     <img
       src="/Low.jpg"
       width="1500"
       alt="LowFidelitySketches"
-      className="detail-image rounded-lg shadow-md"
+      className="detail-image rounded-lg "
     />
   </div>
 </section>
