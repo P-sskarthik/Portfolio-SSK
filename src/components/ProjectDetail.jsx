@@ -661,42 +661,31 @@ Together, these elements keep kids engaged, smiling, and eager to practice divis
     </div>
   </div>
 
-  {/* Theme chips */}
-  <ul className="flex flex-wrap gap-2">
-    {[
-      "Minimal Text",
-      "Voice Assistance",
-      "Tap-Friendly Targets",
-      "Positive Feedback",
-      "Calming Audio",
-      "High Contrast",
-      "One Action / Screen",
-      "Smooth Transitions"
-    ].map((t) => (
-      <li
-        key={t}
-        className="inline-flex items-center rounded-full border border-gray-200 bg-white px-3 py-1 text-sm text-gray-800"
-      >
-        {t}
-      </li>
-    ))}
-  </ul>
+<p className="text-center text-gray-700">
+    View my affinity diagram here:{" "}
+    <a
+      href="https://miro.com/app/live-embed/uXjVJQ-_T-E=/?embedMode=view_only_without_ui&moveToViewport=-6701%2C-2644%2C18729%2C9557&embedId=695867695274"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-blue-600 underline hover:text-blue-700"
+    >
+      Open Live Embed ↗
+    </a>
+  </p>
 
-  {/* Single combined infographic (Problems → Solutions) */}
-  <figure className="space-y-2">
-    <h3 className="text-lg font-semibold text-gray-900">Problems → Solutions (Infographic)</h3>
-    <div className="flex justify-center overflow-hidden rounded-xl">
-      <img
-        src="/Affinity.jpg"  /* <- save your generated image here */
-        alt="Two-column infographic mapping problems to solutions based on affinity themes and iterations"
-        className="w-100 h-auto object-cover t"
-        loading="lazy"
-      />
-    </div>
-    <figcaption className="text-sm text-center text-gray-600">
-      Synthesized problems and the corresponding design iterations that addressed them.
-    </figcaption>
-  </figure>
+ {/* Rounded, fixed box with edge-to-edge image */}
+<div className="mx-auto max-w-6xl">
+  <div className="relative w-full h-[580px] overflow-hidden rounded-[32px] ring-1 ring-gray-200 shadow">
+    <img
+      src="/Affinity.jpg"                 /* your image */
+      alt="Affinity diagram"
+      className="absolute inset-0 h-full w-full object-cover object-center"
+      loading="lazy"
+    />
+  </div>
+</div>
+
+
 
 </section>
 
