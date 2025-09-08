@@ -78,7 +78,7 @@ const Hero = () => {
      As a UI/UX Developer, I blend interaction design, user research, and front-end development to create engaging and user-centered digital experiences.
     </p>
     <p>
-      With 3 years of work experience crafting seamless, user-centered designs, I specialize in building clear and intuitive digital solutions for products in finance, e-commerce, and ed-tech.
+      With 4 years of work experience crafting seamless, user-centered designs, I specialize in building clear and intuitive digital solutions for products in finance, e-commerce, and ed-tech.
     </p>
     <p>
       When I’m not working, you’ll find me planning my next trip, humming my favorite melodies, cooking something tasty, or enjoying a well-deserved nap.
